@@ -1,1 +1,5 @@
 logs sage
+merger/bin/die
+merger/bin/getrealname
+merger/bin/ifoutput
+merger/bin/parseticket

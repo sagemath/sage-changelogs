@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -x
 
 TOP=`pwd`
 MERGER_DIR="$TOP/merger"
 SAGE_ROOT="$TOP/sage"
 DIST="$TOP"
-VERSION=9.0
+VERSION=9.1
 RELEASEMANAGER="Volker Braun"
 
 cd "$SAGE_ROOT"
