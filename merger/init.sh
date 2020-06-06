@@ -56,7 +56,8 @@ setup_environment()
 # dangling symbolic links.
 mkdirlink()
 {
-	local dir=`readlink -mv "$1"`
+        local dir="$1"
+	#local dir=`readlink -mv "$1"`   ### linux only
 	mkdir -p "$dir"
 }
 
