@@ -110,7 +110,8 @@ fi
 # Release note template for final versions #
 ############################################
 if [ $VERSION_IS_FINAL = yes ]; then
-DATESTRING=`date --date="$SAGE_RELEASE_DATE" '+%-d %B %Y'`
+#DATESTRING=`date --date="$SAGE_RELEASE_DATE" '+%-d %B %Y'`    # linuxism
+DATESTRING=$SAGE_RELEASE_DATE
 cat >&4 <<EOF
 Sage `echo $VERSION |sed 's/^sage-//'` was released on $DATESTRING. It is available in
 source and binary form from:
