@@ -1,0 +1,3580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--
+	This file has been automatically generated
+	using the command ./makenotes.sh
+	from the directory /home/jdemeyer/releasenotes/sage
+	on the machine sage4
+	on Tue, 21 Jan 2020 22:14:34 +0000
+	by jdemeyer.
+-->
+<head>
+<title>sage-9.0</title>
+<style type="text/css">
+	div.overview {font-size: 75%;}
+	div.overview h3 {font-weight: bold; font-size: 125%;}
+	div.overview a {text-decoration: inherit;}
+	div.ticket h3 {padding-bottom: 0em; margin-bottom: 0.5em; font-size: 125%; font-weight: normal; color: #444;}
+	div.ticket h3 a {text-decoration: inherit;}
+	div.ticket h3 span {color: #c00; font-weight: bold;}
+	div.ticket {background-color: #ffd; margin-top: 1.5em;}
+	div.ticket p {margin: 0em 0em 0.5em 0em; padding: 0em 0em 0em 3em;}
+	div.ticket dl {margin: 0em; padding: 0em 0em 0em 3em;}
+	div.ticket dt {margin: 0.5em 0em 0em 0em;}
+	div.ticket dt a {color: #d80;}
+	div.ticket dt a.spkg {color: #0aa;}
+	div.ticket dt a.hg {color: #c00;}
+	div.ticket dd {margin: 0em 0em 0em 2em;}
+	pre {margin: 0em;}
+	.status_positive_review {background-color: #afa; color: #080;}
+	.status_needs_review {background-color: #aaf; color: #008;}
+	.status_unknown {background-color: #faa; color: #800;}
+	.error {background-color: #f88 !important;}
+	img {border: none;}
+	a:hover {background-color: #ff0;}
+</style>
+</head>
+<body>
+<h1>Tickets merged for sage-9.0</h1>
+<p>Starting point: <a href='http://boxen.math.washington.edu/home/release/sage-8.9/'>sage-8.9</a></p>
+
+<h2 id='overview'>Overview</h2>
+<div class='overview'>
+
+<h3>sage-9.0.beta0</h3>
+<a href='#t14068'>#14068: nauty_geng is naughty</a> (David Coudert, Dima Pasechnik)<br/>
+<a href='#t14614'>#14614: Improved is_triangle_free using bitfields</a> (David Coudert)<br/>
+<a href='#t17598'>#17598: fixed-mod p-adic integers as polynomial roots</a> (David Roe)<br/>
+<a href='#t21412'>#21412: Convert piecewise functions to SymPy</a> (Frédéric Chapoton)<br/>
+<a href='#t22408'>#22408: Make threejs / three.js the default 3d viewer instead of jmol</a> (Paul Masson, Eric Gourgoulhon)<br/>
+<a href='#t22688'>#22688: Three.js: no plot if 'nan' occurs in JSON representation</a> (Frédéric Chapoton)<br/>
+<a href='#t24824'>#24824: Update GLPK to 4.65</a> (Dima Pasechnik)<br/>
+<a href='#t24894'>#24894: add super RSK algorithm to sage</a> (Matthew Lancellotti, Chaman Agrawal)<br/>
+<a href='#t25019'>#25019: no error raised when dividing by (lazy) zero in AA or QQbar</a> (Vincent Delecroix)<br/>
+<a href='#t25890'>#25890: BinaryQF_reduced_representatives does not return representatives</a> (Simon Brandhorst)<br/>
+<a href='#t26379'>#26379: Comparisons between p-adics are quite slow</a> (Frédéric Chapoton)<br/>
+<a href='#t26496'>#26496: Add the Habib Maurer algorithm for modular decomposition to graphs</a> (David Einstein)<br/>
+<a href='#t26939'>#26939: Adding Young's raising operators</a> (Matthew Lancellotti, George H. Seelinger)<br/>
+<a href='#t27780'>#27780: _flint_rep_abs of zero causes segmentation fault</a> (David Roe)<br/>
+<a href='#t28041'>#28041: py3: Docker images for python3-based Sage</a> (Samuel Lelièvre, Julian Rüth)<br/>
+<a href='#t28073'>#28073: Abstract Code Class</a> (Marketa Slukova)<br/>
+<a href='#t28189'>#28189: prefer "X in Fields()" rather than "X.is_field()"</a> (Vincent Delecroix)<br/>
+<a href='#t28248'>#28248: Add .boundary_complex() method for simplicial polytopes</a> (Jean-Philippe Labbé)<br/>
+<a href='#t28372'>#28372: Update Cremona database of elliptic curves</a> (John Cremona)<br/>
+<a href='#t28392'>#28392: dynamic_class: ignore Python 3's new __weakref__ class attribute</a> (Nicolas M. Thiéry)<br/>
+<a href='#t28410'>#28410: Bug with docker images sagemath/sagemath-dev:develop and sagemath/sagemath:develop</a> (Julian Rüth)<br/>
+<a href='#t28426'>#28426: With Python 3 build, do not install python2</a> (John Palmieri)<br/>
+<a href='#t28443'>#28443: move remaining references from graphs/ to references/index.rst</a> (Hendrik Schrezenmaier)<br/>
+<a href='#t28464'>#28464: .is_inscribed() makes a bad assumption in Polyhedron</a> (Thierry Monteil)<br/>
+<a href='#t28469'>#28469: RBF(expr, rad) where expr is a symbolic expression ignores the radius</a> (Marc Mezzarobba)<br/>
+<a href='#t28471'>#28471: remove deprecation in Hochschild complex</a> (Frédéric Chapoton)<br/>
+<a href='#t28472'>#28472: Upgrade eclib to v.20190909</a> (John Cremona)<br/>
+<a href='#t28474'>#28474: Spherical Bessel functions have wrong phase for negative argument</a> (Paul Masson)<br/>
+<a href='#t28475'>#28475: some cleanup in matrix_sparse.pyx</a> (Frédéric Chapoton)<br/>
+<a href='#t28477'>#28477: py3: add combinat to the known passing folders</a> (Frédéric Chapoton)<br/>
+<a href='#t28478'>#28478: Include traceback when Sage crashes on startup</a> (David Roe)<br/>
+<a href='#t28480'>#28480: Let OEIS sequences have unique representation</a> (Thierry Monteil)<br/>
+<a href='#t28481'>#28481: free_module method for finite fields, number fields and p-adics</a> (David Roe)<br/>
+<a href='#t28482'>#28482: Incorrect indexing for a regular matroid from a graphic matroid</a> (Travis Scrimshaw)<br/>
+<a href='#t28488'>#28488: Torsion subgroup of elliptic curves over number fields: more efficient method</a> (John Cremona)<br/>
+<a href='#t28493'>#28493: Update to primecount 5.1</a> (Antonio Rojas)<br/>
+<a href='#t28495'>#28495: Faster is_directed_acyclic</a> (Frédéric Chapoton)<br/>
+<a href='#t28497'>#28497: MR34: Fix some minor errors in docstrings</a> (Julian Rüth)<br/>
+<a href='#t28498'>#28498: Memory leak in BasisExchangeMatroid.components</a> (Thierry Monteil)<br/>
+<a href='#t28499'>#28499: py3: typing should not be installed in Python 3</a> (Vincent Delecroix)<br/>
+<a href='#t28503'>#28503: Bug in formal composition of maps</a> (Frédéric Chapoton)<br/>
+<a href='#t28504'>#28504: conversion of posets to libgap</a> (Frédéric Chapoton)<br/>
+<a href='#t28511'>#28511: use --disable-maintainer-mode for configuring autoconf'ed packages if possible</a> (Dima Pasechnik)<br/>
+<a href='#t28512'>#28512: reading a large expression from a file takes quadratic time</a> (Nils Bruin)<br/>
+<a href='#t28514'>#28514: remove last _cmp_ in schemes</a> (Frédéric Chapoton)<br/>
+<a href='#t28516'>#28516: Interface Arb ζ, Γ, Lambert W and derivatives</a> (Marc Mezzarobba)<br/>
+<a href='#t28521'>#28521: Bug of cartesian_product_iterator in Python3</a> (David Coudert)<br/>
+<a href='#t28522'>#28522: PolyhedralFan of Groebner fan is created twice</a> (Jean-Philippe Labbé)<br/>
+<a href='#t28524'>#28524: SyntaxError in sage_getargspec of introspection</a> (Markus Wageringel)<br/>
+
+<h3>sage-9.0.beta1</h3>
+<a href='#t17468'>#17468: Strange integration error/hang with log(abs(sin(x)))</a> (Frédéric Chapoton)<br/>
+<a href='#t25508'>#25508: Implement reconstruction of binary quintics</a> (Jesper Noordsij)<br/>
+<a href='#t26105'>#26105: Support base_morphism for hom(im_gens)</a> (Julian Rüth, David Roe)<br/>
+<a href='#t27949'>#27949: Pull out subfield() method from subfields() method.</a> (Kwankyu Lee)<br/>
+<a href='#t28074'>#28074: Fix caching of Macaulay2 polynomial rings</a> (Markus Wageringel)<br/>
+<a href='#t28082'>#28082: upgrade to giacpy_sage-0.6.8</a> (Frederic Han)<br/>
+<a href='#t28187'>#28187: Make _derivative consistent</a> (Bruno Grenet)<br/>
+<a href='#t28416'>#28416: Add subjoinsemilattice</a> (Jori Mäntysalo)<br/>
+<a href='#t28459'>#28459: spkg-configure.m4 for glpk</a> (Dima Pasechnik)<br/>
+<a href='#t28470'>#28470: remove deprecated is_Set</a> (Frédéric Chapoton)<br/>
+<a href='#t28484'>#28484: Implement Orlik-Terao algebras</a> (Travis Scrimshaw)<br/>
+<a href='#t28491'>#28491: still another harvest of typos</a> (Frédéric Chapoton)<br/>
+<a href='#t28492'>#28492: another wave of typos</a> (Frédéric Chapoton)<br/>
+<a href='#t28496'>#28496: cleanup of continued fraction</a> (Frédéric Chapoton)<br/>
+<a href='#t28509'>#28509: Polyhedron: bounding box does not catch empty polyhedron</a> (Jonathan Kliem)<br/>
+<a href='#t28510'>#28510: a tiny typo ticket</a> (Frédéric Chapoton)<br/>
+<a href='#t28518'>#28518: some cleanup of len(xxx) = 0 in pyx files</a> (Frédéric Chapoton)<br/>
+<a href='#t28525'>#28525: use smaller doctests in PasechnikGraph to avoid memory errors in patchbots</a> (David Coudert)<br/>
+<a href='#t28526'>#28526: infinite recursion in skew_hadamard_matrix when n=0</a> (David Coudert)<br/>
+<a href='#t28527'>#28527: Character art concatenation takes quadratic time</a> (Markus Wageringel)<br/>
+<a href='#t28528'>#28528: Random minor improvements to the arb interface</a> (Marc Mezzarobba)<br/>
+<a href='#t28532'>#28532: fix a bunch of warnings</a> (David Coudert)<br/>
+<a href='#t28534'>#28534: Upgrade sqlite to 3.29.0</a> (Emmanuel Charpentier)<br/>
+<a href='#t28535'>#28535: Fundamental group of simplicial sets with trivial 1-skeleton</a> (Miguel Marco)<br/>
+<a href='#t28536'>#28536: pep cleanup of Brandt modules</a> (Frédéric Chapoton)<br/>
+<a href='#t28537'>#28537: remove one deprecated thing in misc/cython</a> (Frédéric Chapoton)<br/>
+<a href='#t28542'>#28542: change behaviour of denominator for p-adics</a> (Xavier Caruso)<br/>
+<a href='#t28543'>#28543: Improve computation of connection coefficients</a> (Eric Gourgoulhon)<br/>
+<a href='#t28546'>#28546: fix a javascript warning</a> (Frédéric Chapoton)<br/>
+<a href='#t28547'>#28547: Remove hardcoded mathjax path in docs/conf.py</a> (Antonio Rojas)<br/>
+<a href='#t28548'>#28548: various cleaning</a> (Frédéric Chapoton)<br/>
+<a href='#t28550'>#28550: DeprecationWarning: invalid escape sequence in docstrings when building with py3</a> (Steven Trogdon)<br/>
+<a href='#t28551'>#28551: slightly faster Moebius matrix for posets</a> (Frédéric Chapoton)<br/>
+<a href='#t28556'>#28556: fix word_problem()</a> (Frédéric Chapoton)<br/>
+<a href='#t28558'>#28558: remove deprecation in modules</a> (Frédéric Chapoton)<br/>
+<a href='#t28560'>#28560: Ignore newlines in three.js version search</a> (Antonio Rojas)<br/>
+<a href='#t28563'>#28563: Manifolds: Dicts and Lists Copied</a> (Michael Jung)<br/>
+<a href='#t28565'>#28565: improve introspection of Macaulay2 interface</a> (Markus Wageringel)<br/>
+<a href='#t28566'>#28566: improve conversions between Macaulay2 and Sage</a> (Markus Wageringel)<br/>
+<a href='#t28568'>#28568: implement _install_hints method for the Macaulay2 interface</a> (Anton Leykin)<br/>
+<a href='#t28570'>#28570: fix matrix inversion over ZZ</a> (Frédéric Chapoton)<br/>
+<a href='#t28571'>#28571: pass 'macaulay2' as argument to '_macaulay2_init_()'</a> (Markus Wageringel)<br/>
+<a href='#t28579'>#28579: Wedge Product with Scalar Fields</a> (Michael Jung)<br/>
+<a href='#t28582'>#28582: some cleaning for is_ring</a> (Frédéric Chapoton)<br/>
+
+<h3>sage-9.0.beta2</h3>
+<a href='#t18957'>#18957: ehrhart_polynomial should be made available for polytopes defined over QQ</a> (Sophia Elia)<br/>
+<a href='#t26403'>#26403: Compile Sage with Cython language_level=3str</a> (Jeroen Demeyer)<br/>
+<a href='#t28487'>#28487: Morphisms from p-adic rings and fields</a> (David Roe)<br/>
+<a href='#t28508'>#28508: An API for testing if a parent's element “are” real/complex numbers</a> (Marc Mezzarobba)<br/>
+<a href='#t28567'>#28567: allow user to specify strategy for Groebner basis computations with Macaulay2</a> (Dima Pasechnik, Franco Saliola)<br/>
+<a href='#t28569'>#28569: Internal links broken in poset catalog</a> (John Palmieri)<br/>
+<a href='#t28584'>#28584: Three.js: Add render_order option for transparent objects</a> (Paul Masson)<br/>
+<a href='#t28587'>#28587: category of GL(1,ZZ)</a> (Frédéric Chapoton)<br/>
+<a href='#t28588'>#28588: Submultiset is broken</a> (Martin Rubey)<br/>
+<a href='#t28590'>#28590: convert Macaulay2 graphs to Sage graphs</a> (Franco Saliola)<br/>
+<a href='#t28593'>#28593: cleaning backslash and refresh doc in one file</a> (Frédéric Chapoton)<br/>
+<a href='#t28594'>#28594: better categories for some groups</a> (Frédéric Chapoton)<br/>
+<a href='#t28595'>#28595: convert some _cmp_ to _richcmp_</a> (Frédéric Chapoton)<br/>
+<a href='#t28597'>#28597: better category for arithmetic subgroups of SL2(ZZ)</a> (Frédéric Chapoton)<br/>
+<a href='#t28607'>#28607: CombinatorialPolyhedron: make f_vector a vector</a> (Jonathan Kliem)<br/>
+
+<h3>sage-9.0.beta3</h3>
+<a href='#t20264'>#20264: Hasse-Weil Zeta function of a cyclic cover of P1 over finite fields.</a> (Vishal Arul, Edgar Costa, Richard Magner, Nicholas Triantafillou)<br/>
+<a href='#t27813'>#27813: Implement _im_gens_ for LaurentPolynomial_mpair</a> (Sebastian Oehms)<br/>
+<a href='#t28155'>#28155: Check for formality of GCDA's</a> (Miguel Marco, Victor Manero)<br/>
+<a href='#t28159'>#28159: Vector Bundles</a> (Michael Jung)<br/>
+<a href='#t28463'>#28463: .neighbors() error in polyhedron.representation</a> (Jonathan Kliem)<br/>
+<a href='#t28531'>#28531: bliss canonical labels ignores edge labels</a> (Vincent Delecroix)<br/>
+<a href='#t28562'>#28562: Tensor Fields: Better Zero Treatment</a> (Michael Jung)<br/>
+<a href='#t28600'>#28600: Use standard notation for pullback and pushforward on manifolds</a> (Eric Gourgoulhon)<br/>
+<a href='#t28601'>#28601: some typos and https</a> (Frédéric Chapoton)<br/>
+<a href='#t28603'>#28603: CombinatorialPolyhedron: edge_graph -&gt; vertex_graph</a> (Jonathan Kliem)<br/>
+<a href='#t28604'>#28604: CombinatorialPolyhedron: ridge_graph -&gt; facet_graph</a> (Jonathan Kliem)<br/>
+<a href='#t28619'>#28619: Reference manual doesn't build with --include-tests-blocks</a> (John Palmieri)<br/>
+<a href='#t28621'>#28621: Add CombinatorialPolyhedron method to Polyhedron objects</a> (Jonathan Kliem)<br/>
+<a href='#t28625'>#28625: Let CombinatorialPolyhedron handle f_vector of polyhedra</a> (Jonathan Kliem)<br/>
+<a href='#t28631'>#28631: Implement polynomial factorization over universal cyclotomic field</a> (Sebastian Oehms)<br/>
+<a href='#t28636'>#28636: refresh the pieri_factors file</a> (Frédéric Chapoton)<br/>
+<a href='#t28637'>#28637: remove deprecated alias for algebraic dependency</a> (Frédéric Chapoton)<br/>
+<a href='#t28642'>#28642: Silence pyflakes warning</a> (Brent Baccala)<br/>
+
+<h3>sage-9.0.beta4</h3>
+<a href='#t18861'>#18861: Three apparently useless polyhedron methods</a> (Jean-Philippe Labbé)<br/>
+<a href='#t25390'>#25390: multivariate factorization over QQbar</a> (Brent Baccala)<br/>
+<a href='#t26922'>#26922: Wrong f-vector for unbounded polyhedra</a> (Jonathan Kliem)<br/>
+<a href='#t27866'>#27866: Introduce graphics insets</a> (Eric Gourgoulhon)<br/>
+<a href='#t28126'>#28126: Fix interact in ECM interface</a> (Jerry James)<br/>
+<a href='#t28182'>#28182: Linear algorithm for squares in words</a> (Émile Nadeau)<br/>
+<a href='#t28334'>#28334: py3: polynomial_rational_flint.pyx problem</a> (John Palmieri)<br/>
+<a href='#t28414'>#28414: p_group_cohomology does not build on Python3</a> (Simon King)<br/>
+<a href='#t28429'>#28429: Add the classical construction of the 120-cell</a> (Jean-Philippe Labbé)<br/>
+<a href='#t28545'>#28545: some cleanup in mod 2 tests</a> (Frédéric Chapoton)<br/>
+<a href='#t28554'>#28554: Scalar Field Restrictions</a> (Michael Jung)<br/>
+<a href='#t28572'>#28572: conversion of quotient rings to macaulay2</a> (Franco Saliola)<br/>
+<a href='#t28591'>#28591: convert chain complexes from Macaulay2 to Sage</a> (Markus Wageringel)<br/>
+<a href='#t28622'>#28622: Patchbot and Python 3 doctest failures</a> (John Palmieri)<br/>
+<a href='#t28628'>#28628: Tensor Fields: set_restriction Behaviour</a> (Michael Jung)<br/>
+<a href='#t28633'>#28633: Add __copy__ method to backend normaliz of Polyhedron</a> (Jonathan Kliem)<br/>
+<a href='#t28643'>#28643: Speed up incidence matrix of polyhedra</a> (Jonathan Kliem)<br/>
+<a href='#t28644'>#28644: unicode art fails for empty skew partition</a> (Frédéric Chapoton)<br/>
+<a href='#t28649'>#28649: py3: flush output from FLINT error message</a> (John Palmieri)<br/>
+<a href='#t28650'>#28650: Fix the dimension of PolyhedronFace</a> (Laith Rastanawi)<br/>
+<a href='#t28655'>#28655: Fix typos in the method 'is_combinatorially_isomorphic' of Polyhedron</a> (Laith Rastanawi)<br/>
+<a href='#t28658'>#28658: Three.js: Add popup menu for accessing additional options</a> (Paul Masson)<br/>
+<a href='#t28659'>#28659: fix #28631</a> (Vincent Delecroix)<br/>
+<a href='#t28661'>#28661: macOS SageMath.app wait for wrong message, significantly delaying notebook launch</a> (Frédéric Chapoton)<br/>
+<a href='#t28662'>#28662: Missing edges when visualizing Polyhedra with threejs</a> (Paul Masson)<br/>
+<a href='#t28663'>#28663: remove deprecated stuff in padics</a> (Frédéric Chapoton)<br/>
+<a href='#t28665'>#28665: speed up StandardPermutations_descents.cardinality</a> (Martin Rubey)<br/>
+<a href='#t28666'>#28666: dot2tex: typo in URL for graphviz</a> (John Palmieri)<br/>
+<a href='#t28667'>#28667: remove deprecated stuff in perfect matchings</a> (Frédéric Chapoton)<br/>
+<a href='#t28668'>#28668: fix the base_ring of face_split</a> (Laith Rastanawi)<br/>
+<a href='#t28670'>#28670: better category for matrix groups over finite rings</a> (Frédéric Chapoton)<br/>
+<a href='#t28673'>#28673: Do not create ipython symlink</a> (John Palmieri)<br/>
+
+<h3>sage-9.0.beta5</h3>
+<a href='#t27195'>#27195: slightly faster highest_weight_vectors_iterator</a> (Martin Rubey, Travis Scrimshaw)<br/>
+<a href='#t28245'>#28245: Implement center of a HyperplaneArrangement</a> (Julian Ritter)<br/>
+<a href='#t28502'>#28502: MR36: Use Sphinx hash function</a> (Julian Rüth)<br/>
+<a href='#t28506'>#28506: Direct sum of polyhedron is broken, so is minkowski difference and face truncation</a> (Jonathan Kliem)<br/>
+<a href='#t28574'>#28574: conversion of nested polynomial rings to Macaulay2</a> (Markus Wageringel)<br/>
+<a href='#t28578'>#28578: Mixed Forms Code Improvements</a> (Michael Jung)<br/>
+<a href='#t28645'>#28645: Error in precision of Tate elliptic curves over Qp</a> (Chris Wuthrich)<br/>
+<a href='#t28657'>#28657: Build Sage without "python"</a> (John Palmieri)<br/>
+<a href='#t28669'>#28669: Unnecessary coordinate check while initializing an integrated curve</a> (Eric Gourgoulhon)<br/>
+<a href='#t28674'>#28674: RecursivelyEnumeratedSet: certified enumeration order</a> (Markus Wageringel)<br/>
+<a href='#t28678'>#28678: Bug in CombinatorialPolyhedron of empty Lattice polytope</a> (Jonathan Kliem)<br/>
+<a href='#t28681'>#28681: py3: Construction of (A#A)+(A#A) fails for CombinatorialFreeModules</a> (Christian Nassau)<br/>
+<a href='#t28687'>#28687: Demote scons to experimental</a> (John Palmieri)<br/>
+<a href='#t28690'>#28690: Vector Bundles: Section Module Name Fix</a> (Michael Jung)<br/>
+<a href='#t28691'>#28691: Xcode 11 breaks gfortran build</a> (Volker Braun)<br/>
+<a href='#t28693'>#28693: Update sagenb exporter 3.3</a> (Volker Braun)<br/>
+<a href='#t28699'>#28699: Three.js: Upgrade to r110</a> (Paul Masson)<br/>
+<a href='#t28702'>#28702: Three.js: Add option to render only single side of surface</a> (Paul Masson)<br/>
+
+<h3>sage-9.0.beta6</h3>
+<a href='#t15077'>#15077: Inconsistency in polynomial .reverse(n)</a> (Bruno Grenet)<br/>
+<a href='#t24108'>#24108: quadratic_form_from_invariants()</a> (Simon Brandhorst)<br/>
+<a href='#t25183'>#25183: Bug in the associahedron object</a> (Jonathan Kliem)<br/>
+<a href='#t27089'>#27089: CPLEXBackend.solver_parameter: Handle CPX_PARAMTYPE_LONG</a> (David Coudert)<br/>
+<a href='#t27302'>#27302: Cubic Braid Groups</a> (Sebastian Oehms)<br/>
+<a href='#t27761'>#27761: DES Block Cipher</a> (Lukas Stennes)<br/>
+<a href='#t28104'>#28104: Openblas build failure</a> (Volker Braun)<br/>
+<a href='#t28382'>#28382: Correct types in cplex backend</a> (David Coudert)<br/>
+<a href='#t28605'>#28605: CombinatorialPolyhedron: replace attributes by methods</a> (Jonathan Kliem)<br/>
+<a href='#t28606'>#28606: CombinatorialPolyhedron: unbounded -&gt; is_bounded</a> (Jonathan Kliem)<br/>
+<a href='#t28652'>#28652: Rework the constructor of PermutationGroupElement</a> (Vincent Delecroix)<br/>
+<a href='#t28660'>#28660: Make Python 3 the default</a> (Frédéric Chapoton)<br/>
+<a href='#t28686'>#28686: Demote some optional packages to experimental</a> (John Palmieri)<br/>
+<a href='#t28689'>#28689: py3: fix doctests with cbc</a> (David Coudert)<br/>
+<a href='#t28700'>#28700: Fixing missing optional flag in base_QQ.py</a> (Sophia Elia)<br/>
+<a href='#t28707'>#28707: More control on the numerical ODE solver for integrated curves and geodesics</a> (Eric Gourgoulhon)<br/>
+<a href='#t28708'>#28708: 5 cplex doctests failed in cplex_backend.pyx</a> (David Coudert)<br/>
+<a href='#t28709'>#28709: Python executable in doctest/control.py</a> (John Palmieri)<br/>
+<a href='#t28714'>#28714: clarify docstring of plot.colors.float_to_integer</a> (Dave Morris)<br/>
+<a href='#t28715'>#28715: remove some deprecated stuff in combinat after 23319 and 15597</a> (Frédéric Chapoton)<br/>
+<a href='#t28717'>#28717: some cleanup in __init__ files</a> (Frédéric Chapoton)<br/>
+<a href='#t28719'>#28719: remove deprecated function aliases</a> (Frédéric Chapoton)<br/>
+<a href='#t28721'>#28721: Document sage-dist-helpers</a> (John Palmieri)<br/>
+<a href='#t28725'>#28725: fix lawrence_extension and lawrence_polytope for backend field</a> (Laith Rastanawi, Jonathan Kliem)<br/>
+<a href='#t28726'>#28726: py3: cysignals fails its test suite</a> (John Palmieri)<br/>
+<a href='#t28730'>#28730: cvxopt fails its test suite</a> (John Palmieri)<br/>
+<a href='#t28734'>#28734: a few miscellanous details</a> (Frédéric Chapoton)<br/>
+
+<h3>sage-9.0.beta7</h3>
+<a href='#t23816'>#23816: implement left action of matrices on scheme points</a> (Ben Hutz)<br/>
+<a href='#t27790'>#27790: compatibility with cplex 12.9</a> (David Coudert)<br/>
+<a href='#t27838'>#27838: 5 internet doctests failing in findstat.py</a> (Frédéric Chapoton)<br/>
+<a href='#t28214'>#28214: Compute and display graph of nth-preimage tree</a> (Brandon Gontmacher, Joey Lupo, Wayne Peng)<br/>
+<a href='#t28304'>#28304: add type information to _repr_ of Macaulay2 elements</a> (Markus Wageringel)<br/>
+<a href='#t28564'>#28564: Tensor Fields and Sections: Naming Consistencies</a> (Michael Jung)<br/>
+<a href='#t28675'>#28675: Deprecate GraphicsArray import from sage.plot.graphics</a> (Eric Gourgoulhon)<br/>
+<a href='#t28685'>#28685: Upgrade from beautifulsoup to beautifulsoup4</a> (John Palmieri)<br/>
+<a href='#t28698'>#28698: py3: HTML documentation for GlobalOptions does not show up correctly</a> (Kwankyu Lee)<br/>
+<a href='#t28732'>#28732: update sagetex to version 3.4</a> (Dima Pasechnik)<br/>
+<a href='#t28736'>#28736: fix Texture for negative inputs</a> (Frédéric Chapoton)<br/>
+<a href='#t28737'>#28737: remove deprecated stuff in old coercion model</a> (Frédéric Chapoton)<br/>
+<a href='#t28748'>#28748: Python 3 debug build fails to start</a> (Volker Braun)<br/>
+<a href='#t28795'>#28795: Python 3 overflow in IntegerModRing pow</a> (Volker Braun)<br/>
+<a href='#t28797'>#28797: 32-bit Python 3 failures in combinat</a> (Frédéric Chapoton)<br/>
+
+<h3>sage-9.0.beta8</h3>
+<a href='#t22380'>#22380: Upgrade to cvxopt 1.2.x</a> (François Bissey)<br/>
+<a href='#t23720'>#23720: Plotting Mandelbrot Set for General Polynomials</a> (Ben Barros, Ben Hutz)<br/>
+<a href='#t23740'>#23740: Plotting Julia Sets for General Polynomials</a> (Ben Barros, Andrew O'Desky)<br/>
+<a href='#t25701'>#25701: Implement Sieve algorithm for product_projective space</a> (Raghukul Raman, Ben Hutz)<br/>
+<a href='#t26816'>#26816: Specify subgroups of Galois groups using generators</a> (Peter Bruin)<br/>
+<a href='#t26817'>#26817: GaloisGroup_subgroup.fixed_field() should always return an embedding</a> (Peter Bruin)<br/>
+<a href='#t27154'>#27154: speed_up_Burge</a> (Martin Rubey)<br/>
+<a href='#t27408'>#27408: Edge view for graphs</a> (David Coudert)<br/>
+<a href='#t27784'>#27784: Characteristic Classes on Vector Bundles</a> (Michael Jung)<br/>
+<a href='#t28170'>#28170: enhance is_postcritically_finite, critical_point_portrait, and multiplier_spectra to work over number fields and finite fields</a> (Heidi Benham, Julia Cai, Leopold Mayer, Ben Hutz)<br/>
+<a href='#t28213'>#28213: Renaming rational_preperiodic_points() to all_preperiodic_points()</a> (Eric Zhu, Alex Galarraga, Bianca Thompson, Ben Hutz)<br/>
+<a href='#t28489'>#28489: py3 + OS X: symbolic/expression.pyx</a> (Frédéric Chapoton)<br/>
+<a href='#t28501'>#28501: MR35: Honour docbuild limits when building documentation in Dockerfile</a> (Julian Rüth)<br/>
+<a href='#t28583'>#28583: unicode_art of Matrix_mod2_dense fails</a> (Markus Wageringel)<br/>
+<a href='#t28614'>#28614: CombinatorialPolyhedron: length_* to n_*</a> (Jonathan Kliem)<br/>
+<a href='#t28627'>#28627: Lazy OEIS sequences</a> (Thierry Monteil)<br/>
+<a href='#t28680'>#28680: Three.js: Update documentation examples</a> (Paul Masson)<br/>
+<a href='#t28694'>#28694: rich comparison for matrices</a> (Frédéric Chapoton)<br/>
+<a href='#t28705'>#28705: Fix conversion of Booleans in interfaces</a> (Markus Wageringel)<br/>
+<a href='#t28716'>#28716: Construction of a vector frame from a family of vector fields</a> (Eric Gourgoulhon)<br/>
+<a href='#t28720'>#28720: Method is_diagonalizable() should not raise an error for legitimate inputs</a> (Kwankyu Lee)<br/>
+<a href='#t28733'>#28733: Reference manual SageTeX incorrect link</a> (Dima Pasechnik)<br/>
+<a href='#t28739'>#28739: cleaning "space:" in the doc of combinat</a> (Frédéric Chapoton)<br/>
+<a href='#t28740'>#28740: fix typo convertable</a> (Frédéric Chapoton)<br/>
+<a href='#t28741'>#28741: Lattice Polytopes: `compute_facets` does not check dimension when setting is_reflexive</a> (Jonathan Kliem)<br/>
+<a href='#t28744'>#28744: py3: add bytes_to_str in Octave interface</a> (Markus Wageringel)<br/>
+<a href='#t28747'>#28747: further "space:" cleaning outside of combinat</a> (Frédéric Chapoton)<br/>
+<a href='#t28749'>#28749: some middle-scale cleanup Returns ==&gt; Return in the doc</a> (Frédéric Chapoton)<br/>
+<a href='#t28751'>#28751: enhance some calls to "while len"</a> (Frédéric Chapoton)<br/>
+<a href='#t28756'>#28756: py3: fix doctests with gurobi</a> (David Coudert)<br/>
+<a href='#t28758'>#28758: random output in a giacpy_sage doctest</a> (Markus Wageringel)<br/>
+<a href='#t28759'>#28759: py3: dot2tex + graphviz doctests failures</a> (Frédéric Chapoton)<br/>
+<a href='#t28760'>#28760: py3: internet str vs bytes doctests failures</a> (Frédéric Chapoton)<br/>
+<a href='#t28761'>#28761: py3: further fixes for misc</a> (Frédéric Chapoton)<br/>
+<a href='#t28763'>#28763: DIMACS solver not workng with Python3 (7 glucose optional doctests failed)</a> (Thierry Monteil)<br/>
+<a href='#t28764'>#28764: 2 internet doctest failed in hadamard_matrix.py</a> (Frédéric Chapoton)<br/>
+<a href='#t28769'>#28769: Scalar field raise AttributeError on show_identifiers call</a> (Eric Gourgoulhon)<br/>
+<a href='#t28770'>#28770: Polyhedra coercion of base rings fails for number fields</a> (Jonathan Kliem)<br/>
+<a href='#t28779'>#28779: Error in "primes_of_bad_reduction" for DynamicalSystem</a> (Paul Fili)<br/>
+<a href='#t28783'>#28783: fix opacity for add_condition in mono-coloured plot3d</a> (Frédéric Chapoton)<br/>
+<a href='#t28784'>#28784: Adding multiple symmetries and multiple contractions to tensors</a> (Léo Brunswic)<br/>
+<a href='#t28790'>#28790: https in README.md</a> (Frédéric Chapoton)<br/>
+<a href='#t28791'>#28791: Implement Feature without using sage.misc.cachefunc, sage.structure.unique_representation</a> (Matthias Koeppe)<br/>
+<a href='#t28793'>#28793: 2 more random doctest failures</a> (Markus Wageringel)<br/>
+<a href='#t28805'>#28805: Remove sagenb from DOC_DEPENDENCIES</a> (François Bissey, John Palmieri)<br/>
+<a href='#t28807'>#28807: little typo ticket</a> (Frédéric Chapoton)<br/>
+<a href='#t28809'>#28809: cleanup src/sage/combinat/partition_shifting_algebras.py</a> (Frédéric Chapoton)<br/>
+<a href='#t28810'>#28810: small fix in regular expression for trac warning in sage/all.py</a> (Frédéric Chapoton)<br/>
+<a href='#t28811'>#28811: add hash for hypergeometric motives</a> (Frédéric Chapoton)<br/>
+<a href='#t28812'>#28812: #28795 followup: py2 doctest failure in pynac.pyx</a> (John Palmieri)<br/>
+<a href='#t28820'>#28820: convert guava interface to libgap</a> (Dima Pasechnik)<br/>
+<a href='#t28823'>#28823: str_to_bytes in math-readline script for Mathematica console</a> (Markus Wageringel)<br/>
+<a href='#t28824'>#28824: make doc-pdf race condition</a> (Volker Braun)<br/>
+
+<h3>sage-9.0.beta9</h3>
+<a href='#t24398'>#24398: Document function initialization parameters</a> (Ralf Stephan)<br/>
+<a href='#t28258'>#28258: Fork errors in sage.misc.cython doctests</a> (Erik Bray)<br/>
+<a href='#t28289'>#28289: Settings in ipython_config.py can cause tests to fail</a> (Erik Bray)<br/>
+<a href='#t28476'>#28476: norm returns a negative number</a> (Dave Morris)<br/>
+<a href='#t28541'>#28541: bug in change_ring for polynomials</a> (Xavier Caruso)<br/>
+<a href='#t28639'>#28639: Polyhedron_normaliz: Initialize new cone from both Vrep and Hrep</a> (Jonathan Kliem)<br/>
+<a href='#t28710'>#28710: update sagenb to 1.1.3</a> (Dima Pasechnik)<br/>
+<a href='#t28792'>#28792: SageNB, message about removal</a> (Frédéric Chapoton)<br/>
+<a href='#t28801'>#28801: Fix ThreeJS script paths for Firefox on Windows</a> (Erik Bray)<br/>
+<a href='#t28818'>#28818: from gap to libgap in strongly_regular_db</a> (Dima Pasechnik)<br/>
+<a href='#t28821'>#28821: get rid of filter</a> (Frédéric Chapoton)<br/>
+<a href='#t28822'>#28822: Use assert on a condition that should always be true</a> (Brent Baccala)<br/>
+<a href='#t28825'>#28825: refresh the file combinat/tuple</a> (Frédéric Chapoton)<br/>
+<a href='#t28826'>#28826: a few typos</a> (Markus Wageringel)<br/>
+<a href='#t28830'>#28830: cleaning the file dlx.py</a> (Frédéric Chapoton)<br/>
+<a href='#t28833'>#28833: ResourceWarning: unclosed file with SAGE_DEBUG=yes</a> (Frédéric Chapoton)<br/>
+<a href='#t28834'>#28834: Doctesting: don't test SageNB files unless SageNB has been installed</a> (John Palmieri)<br/>
+<a href='#t28835'>#28835: Remove python3-known-passing.txt and the corresponding parts of the Makefile</a> (John Palmieri)<br/>
+<a href='#t28839'>#28839: adding a minimal lgtm.yml file</a> (Frédéric Chapoton)<br/>
+<a href='#t28840'>#28840: pari 2.11.2</a> (Frédéric Chapoton)<br/>
+<a href='#t28841'>#28841: fix some little details in doc</a> (Frédéric Chapoton)<br/>
+<a href='#t28843'>#28843: typo ticket: explicitely -&gt; explicitly</a> (Martin Rubey)<br/>
+
+<h3>sage-9.0.beta10</h3>
+<a href='#t12679'>#12679: rewrite Matrix_modn_sparse and vector_modn_sparse code so that the modulus is 64-bit on 64-bit platforms</a> (Frédéric Chapoton)<br/>
+<a href='#t15645'>#15645: Raise coverage of schemes/hyperelliptic_curves/monsky_washnitzer.py to 100%</a> (Kiran Kedlaya)<br/>
+<a href='#t17339'>#17339: Polyhedron class mistreats empty inputs</a> (Darij Grinberg, Jonathan Kliem)<br/>
+<a href='#t26332'>#26332: Remove the ore_algebra optional package</a> (Thierry Monteil, Marc Mezzarobba)<br/>
+<a href='#t28326'>#28326: Restore default term state after printing environment variables</a> (Henri Derycke)<br/>
+<a href='#t28329'>#28329: Suppress warnings from failed psutil statistics collection</a> (Michael Orlitzky)<br/>
+<a href='#t28355'>#28355: Allow precision to be passed into the elliptic_j function</a> (Gerardo E Zelaya Eufemia, Kevin Lui)<br/>
+<a href='#t28374'>#28374: MR31: Build documentation artifacts during docker build</a> (Julian Rüth)<br/>
+<a href='#t28507'>#28507: MR37: Update symlinks in the docker -dev image</a> (Julian Rüth)<br/>
+<a href='#t28533'>#28533: Remove adding /usr/include/$MULTI_ARCH to CPATH</a> (Isuru Fernando)<br/>
+<a href='#t28596'>#28596: Fix jmol permissions</a> (Erik Bray)<br/>
+<a href='#t28613'>#28613: CombinatorialPolyhedron: attributes, H -&gt; facet_names; V -&gt; Vrep</a> (Jonathan Kliem)<br/>
+<a href='#t28632'>#28632: Implement Eulerian Polynomials and Numbers</a> (Frédéric Chapoton)<br/>
+<a href='#t28684'>#28684: Fixing precision of Tate elliptic curves over Qp</a> (Edgar Costa)<br/>
+<a href='#t28743'>#28743: Lattice Polytopes: Implement incidence matrix</a> (Jonathan Kliem)<br/>
+<a href='#t28762'>#28762: 2 doctests failed in cmdline.py related to rst2ipynb</a> (Sébastien Labbé)<br/>
+<a href='#t28766'>#28766: Implement incidence matrix for cones</a> (Jonathan Kliem)<br/>
+<a href='#t28789'>#28789: Zeta functions of hyperelliptic curves giving wrong answers</a> (Kiran Kedlaya)<br/>
+<a href='#t28808'>#28808: failing internet doctest in repl/load.py</a> (Frédéric Chapoton)<br/>
+<a href='#t28819'>#28819: disable problematic external doctests</a> (Markus Wageringel)<br/>
+<a href='#t28828'>#28828: Attributes of polyhedra are exposed</a> (Jonathan Kliem)<br/>
+<a href='#t28829'>#28829: suitesparse does not build on Cygwin</a> (Erik Bray)<br/>
+<a href='#t28832'>#28832: suitesparse spkg does not properly use a DESTDIR installation</a> (Erik Bray, François Bissey)<br/>
+<a href='#t28842'>#28842: Uncaught AttributeError in integrate()</a> (Eric Gourgoulhon)<br/>
+<a href='#t28844'>#28844: some details in heegner.py</a> (Frédéric Chapoton)<br/>
+<a href='#t28845'>#28845: cleaning tableau residues.py</a> (Frédéric Chapoton)<br/>
+<a href='#t28847'>#28847: better unicode art for chain complex</a> (Frédéric Chapoton)<br/>
+<a href='#t28849'>#28849: clean the doc of Monte Carlo integration</a> (Frédéric Chapoton)<br/>
+<a href='#t28850'>#28850: Polar of polytopes does not check if polytope is full-dimensional</a> (Jonathan Kliem)<br/>
+<a href='#t28851'>#28851: Polar of integer polytopes does not respect backend</a> (Jonathan Kliem)<br/>
+<a href='#t28858'>#28858: Fix frobby interface with python3</a> (Miguel Marco)<br/>
+<a href='#t28859'>#28859: some enhanced tests in schemes folder</a> (Frédéric Chapoton)<br/>
+<a href='#t28860'>#28860: some trivial fixes for space around = in combinat</a> (Frédéric Chapoton)<br/>
+<a href='#t28861'>#28861: change some returns to return</a> (Frédéric Chapoton)<br/>
+<a href='#t28863'>#28863: 1 doctest failed in thematic_tutorials/linear_programming.rst</a> (Sébastien Labbé)<br/>
+<a href='#t28872'>#28872: Wrong usage of normaliz/pynormaliz makes sage crash hard</a> (Jonathan Kliem)<br/>
+<a href='#t28874'>#28874: Meaningful errors for immutable graphs</a> (Jonathan Kliem)<br/>
+<a href='#t28875'>#28875: use https in setup.py</a> (Frédéric Chapoton)<br/>
+<a href='#t28876'>#28876: Polyhedron: Let affine hull fully respect backend</a> (Jonathan Kliem)<br/>
+<a href='#t28877'>#28877: Upgrade R to 3.6.2</a> (Emmanuel Charpentier)<br/>
+<a href='#t28881'>#28881: refresh the shuffle algebra file</a> (Frédéric Chapoton, Travis Scrimshaw)<br/>
+<a href='#t28887'>#28887: remove some deprecated function aliases</a> (Frédéric Chapoton)<br/>
+<a href='#t28888'>#28888: refresh the file ell_finite_field</a> (Frédéric Chapoton)<br/>
+<a href='#t28891'>#28891: character art and sympy-conversion of symbolic series</a> (Markus Wageringel)<br/>
+
+<h3>sage-9.0.rc0</h3>
+<a href='#t28094'>#28094: support function fields in characteristic zero</a> (Brent Baccala)<br/>
+<a href='#t28309'>#28309: improvement of method allow_multiple_edges</a> (David Coudert)<br/>
+<a href='#t28654'>#28654: A Bug in the backend `field`</a> (Jonathan Kliem)<br/>
+<a href='#t28837'>#28837: Flow polytope does not work as expected on Multi-Digraphs</a> (David Coudert)<br/>
+<a href='#t28885'>#28885: spkg-configure for cliquer</a> (Dima Pasechnik)<br/>
+<a href='#t28896'>#28896: Graphs: Move common methods of backends to CGraph</a> (Jonathan Kliem)<br/>
+<a href='#t28898'>#28898: pep cleanup in quivers/</a> (Frédéric Chapoton)<br/>
+<a href='#t28900'>#28900: some details in schemes/</a> (Frédéric Chapoton)<br/>
+
+<h3>sage-9.0.rc1</h3>
+<a href='#t28676'>#28676: Pass --with-python=sage-python23 to Singular configure</a> (Matthias Koeppe)<br/>
+<a href='#t28878'>#28878: psutil doesn't build on recent Cygwin</a> (Erik Bray)<br/>
+<a href='#t28910'>#28910: Update "Maintained" to 2020 for DockerHub README</a> (Samuel Lelièvre)<br/>
+</div>
+
+<h2 id='sage90beta0'>sage-9.0.beta0</h2>
+
+<div class='ticket' id='t14068'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/14068'><span>#14068</span>: nauty_geng is naughty</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert, Dima Pasechnik<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t14614'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/14614'><span>#14614</span>: Improved is_triangle_free using bitfields</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t17598'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/17598'><span>#17598</span>: fixed-mod p-adic integers as polynomial roots</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Roe<br/>
+<strong>Reviewer(s):</strong> Xavier Caruso</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t21412'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/21412'><span>#21412</span>: Convert piecewise functions to SymPy</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t22408'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/22408'><span>#22408</span>: Make threejs / three.js the default 3d viewer instead of jmol</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Paul Masson, Eric Gourgoulhon<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t22688'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/22688'><span>#22688</span>: Three.js: no plot if 'nan' occurs in JSON representation</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t24824'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/24824'><span>#24824</span>: Update GLPK to 4.65</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Dima Pasechnik<br/>
+<strong>Reviewer(s):</strong> François Bissey</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t24894'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/24894'><span>#24894</span>: add super RSK algorithm to sage</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Matthew Lancellotti, Chaman Agrawal<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t25019'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/25019'><span>#25019</span>: no error raised when dividing by (lazy) zero in AA or QQbar</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Vincent Delecroix<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t25890'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/25890'><span>#25890</span>: BinaryQF_reduced_representatives does not return representatives</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Simon Brandhorst<br/>
+<strong>Reviewer(s):</strong> Peter Bruin</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t26379'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/26379'><span>#26379</span>: Comparisons between p-adics are quite slow</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> David Roe</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t26496'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/26496'><span>#26496</span>: Add the Habib Maurer algorithm for modular decomposition to graphs</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Einstein<br/>
+<strong>Reviewer(s):</strong> David Coudert, Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t26939'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/26939'><span>#26939</span>: Adding Young's raising operators</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Matthew Lancellotti, George H. Seelinger<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t27780'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/27780'><span>#27780</span>: _flint_rep_abs of zero causes segmentation fault</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Roe<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw, Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28041'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28041'><span>#28041</span>: py3: Docker images for python3-based Sage</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Samuel Lelièvre, Julian Rüth<br/>
+<strong>Reviewer(s):</strong> David Roe</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28073'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28073'><span>#28073</span>: Abstract Code Class</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Marketa Slukova<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik, Durand Amaury</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28189'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28189'><span>#28189</span>: prefer "X in Fields()" rather than "X.is_field()"</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Vincent Delecroix<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28248'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28248'><span>#28248</span>: Add .boundary_complex() method for simplicial polytopes</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jean-Philippe Labbé<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28372'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28372'><span>#28372</span>: Update Cremona database of elliptic curves</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Cremona<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28392'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28392'><span>#28392</span>: dynamic_class: ignore Python 3's new __weakref__ class attribute</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Nicolas M. Thiéry<br/>
+<strong>Reviewer(s):</strong> Erik Bray</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28410'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28410'><span>#28410</span>: Bug with docker images sagemath/sagemath-dev:develop and sagemath/sagemath:develop</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<span class='error'><strong>Work issues:</strong> test docker image</span><br/>
+<strong>Author(s):</strong> Julian Rüth<br/>
+<strong>Reviewer(s):</strong> Vincent Delecroix</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28426'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28426'><span>#28426</span>: With Python 3 build, do not install python2</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28443'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28443'><span>#28443</span>: move remaining references from graphs/ to references/index.rst</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Hendrik Schrezenmaier<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28464'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28464'><span>#28464</span>: .is_inscribed() makes a bad assumption in Polyhedron</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Thierry Monteil<br/>
+<strong>Reviewer(s):</strong> Jean-Philippe Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28469'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28469'><span>#28469</span>: RBF(expr, rad) where expr is a symbolic expression ignores the radius</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Marc Mezzarobba<br/>
+<strong>Reviewer(s):</strong> Vincent Delecroix</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28471'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28471'><span>#28471</span>: remove deprecation in Hochschild complex</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28472'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28472'><span>#28472</span>: Upgrade eclib to v.20190909</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Cremona<br/>
+<strong>Reviewer(s):</strong> John Palmieri</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28474'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28474'><span>#28474</span>: Spherical Bessel functions have wrong phase for negative argument</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Paul Masson<br/>
+<strong>Reviewer(s):</strong> Marc Mezzarobba</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28475'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28475'><span>#28475</span>: some cleanup in matrix_sparse.pyx</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28477'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28477'><span>#28477</span>: py3: add combinat to the known passing folders</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28478'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28478'><span>#28478</span>: Include traceback when Sage crashes on startup</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Roe<br/>
+<strong>Reviewer(s):</strong> Julian Rüth</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28480'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28480'><span>#28480</span>: Let OEIS sequences have unique representation</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Thierry Monteil<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28481'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28481'><span>#28481</span>: free_module method for finite fields, number fields and p-adics</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Roe<br/>
+<strong>Reviewer(s):</strong> Xavier Caruso</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28482'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28482'><span>#28482</span>: Incorrect indexing for a regular matroid from a graphic matroid</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Travis Scrimshaw<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28488'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28488'><span>#28488</span>: Torsion subgroup of elliptic curves over number fields: more efficient method</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Cremona<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28493'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28493'><span>#28493</span>: Update to primecount 5.1</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Antonio Rojas<br/>
+<strong>Reviewer(s):</strong> Vincent Delecroix</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28495'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28495'><span>#28495</span>: Faster is_directed_acyclic</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28497'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28497'><span>#28497</span>: MR34: Fix some minor errors in docstrings</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Julian Rüth<br/>
+<strong>Reviewer(s):</strong> Samuel Lelièvre</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28498'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28498'><span>#28498</span>: Memory leak in BasisExchangeMatroid.components</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Thierry Monteil<br/>
+<strong>Reviewer(s):</strong> Vincent Delecroix</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28499'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28499'><span>#28499</span>: py3: typing should not be installed in Python 3</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Vincent Delecroix<br/>
+<strong>Reviewer(s):</strong> Julian Rüth</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28503'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28503'><span>#28503</span>: Bug in formal composition of maps</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Xavier Caruso</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28504'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28504'><span>#28504</span>: conversion of posets to libgap</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28511'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28511'><span>#28511</span>: use --disable-maintainer-mode for configuring autoconf'ed packages if possible</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Dima Pasechnik<br/>
+<strong>Reviewer(s):</strong> Erik Bray</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28512'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28512'><span>#28512</span>: reading a large expression from a file takes quadratic time</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Nils Bruin<br/>
+<strong>Reviewer(s):</strong> Paul Zimmermann</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28514'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28514'><span>#28514</span>: remove last _cmp_ in schemes</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28516'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28516'><span>#28516</span>: Interface Arb ζ, Γ, Lambert W and derivatives</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Marc Mezzarobba<br/>
+<strong>Reviewer(s):</strong> Vincent Delecroix</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28521'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28521'><span>#28521</span>: Bug of cartesian_product_iterator in Python3</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> Vincent Delecroix</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28522'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28522'><span>#28522</span>: PolyhedralFan of Groebner fan is created twice</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jean-Philippe Labbé<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28524'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28524'><span>#28524</span>: SyntaxError in sage_getargspec of introspection</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<h2 id='sage90beta1'>sage-9.0.beta1</h2>
+
+<div class='ticket' id='t17468'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/17468'><span>#17468</span>: Strange integration error/hang with log(abs(sin(x)))</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Peter Bruin</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t25508'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/25508'><span>#25508</span>: Implement reconstruction of binary quintics</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jesper Noordsij<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t26105'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/26105'><span>#26105</span>: Support base_morphism for hom(im_gens)</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Julian Rüth, David Roe<br/>
+<strong>Reviewer(s):</strong> David Roe, Julian Rüth, Xavier Caruso</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t27949'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/27949'><span>#27949</span>: Pull out subfield() method from subfields() method.</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Kwankyu Lee<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28074'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28074'><span>#28074</span>: Fix caching of Macaulay2 polynomial rings</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28082'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28082'><span>#28082</span>: upgrade to giacpy_sage-0.6.8</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frederic Han<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel, Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28187'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28187'><span>#28187</span>: Make _derivative consistent</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Bruno Grenet<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28416'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28416'><span>#28416</span>: Add subjoinsemilattice</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jori Mäntysalo<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28459'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28459'><span>#28459</span>: spkg-configure.m4 for glpk</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Dima Pasechnik<br/>
+<strong>Reviewer(s):</strong> Isuru Fernando</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28470'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28470'><span>#28470</span>: remove deprecated is_Set</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28484'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28484'><span>#28484</span>: Implement Orlik-Terao algebras</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Travis Scrimshaw<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton, Darij Grinberg</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28491'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28491'><span>#28491</span>: still another harvest of typos</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Thierry Monteil</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28492'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28492'><span>#28492</span>: another wave of typos</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Jori Mäntysalo</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28496'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28496'><span>#28496</span>: cleanup of continued fraction</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Alex J. Best</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28509'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28509'><span>#28509</span>: Polyhedron: bounding box does not catch empty polyhedron</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28510'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28510'><span>#28510</span>: a tiny typo ticket</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> David Coudert</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28518'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28518'><span>#28518</span>: some cleanup of len(xxx) = 0 in pyx files</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28525'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28525'><span>#28525</span>: use smaller doctests in PasechnikGraph to avoid memory errors in patchbots</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik, Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28526'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28526'><span>#28526</span>: infinite recursion in skew_hadamard_matrix when n=0</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28527'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28527'><span>#28527</span>: Character art concatenation takes quadratic time</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28528'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28528'><span>#28528</span>: Random minor improvements to the arb interface</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Marc Mezzarobba<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28532'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28532'><span>#28532</span>: fix a bunch of warnings</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28534'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28534'><span>#28534</span>: Upgrade sqlite to 3.29.0</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Emmanuel Charpentier<br/>
+<strong>Reviewer(s):</strong> Thierry Monteil</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28535'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28535'><span>#28535</span>: Fundamental group of simplicial sets with trivial 1-skeleton</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Miguel Marco<br/>
+<strong>Reviewer(s):</strong> John Palmieri</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28536'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28536'><span>#28536</span>: pep cleanup of Brandt modules</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> David Coudert</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28537'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28537'><span>#28537</span>: remove one deprecated thing in misc/cython</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28542'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28542'><span>#28542</span>: change behaviour of denominator for p-adics</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Xavier Caruso<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28543'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28543'><span>#28543</span>: Improve computation of connection coefficients</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Eric Gourgoulhon<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28546'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28546'><span>#28546</span>: fix a javascript warning</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28547'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28547'><span>#28547</span>: Remove hardcoded mathjax path in docs/conf.py</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Antonio Rojas<br/>
+<strong>Reviewer(s):</strong> François Bissey</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28548'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28548'><span>#28548</span>: various cleaning</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28550'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28550'><span>#28550</span>: DeprecationWarning: invalid escape sequence in docstrings when building with py3</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Steven Trogdon<br/>
+<strong>Reviewer(s):</strong> John Palmieri</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28551'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28551'><span>#28551</span>: slightly faster Moebius matrix for posets</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28556'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28556'><span>#28556</span>: fix word_problem()</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28558'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28558'><span>#28558</span>: remove deprecation in modules</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28560'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28560'><span>#28560</span>: Ignore newlines in three.js version search</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Antonio Rojas<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28563'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28563'><span>#28563</span>: Manifolds: Dicts and Lists Copied</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Michael Jung<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw, Eric Gourgoulhon</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28565'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28565'><span>#28565</span>: improve introspection of Macaulay2 interface</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Franco Saliola</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28566'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28566'><span>#28566</span>: improve conversions between Macaulay2 and Sage</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Franco Saliola</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28568'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28568'><span>#28568</span>: implement _install_hints method for the Macaulay2 interface</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Anton Leykin<br/>
+<strong>Reviewer(s):</strong> Franco Saliola</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28570'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28570'><span>#28570</span>: fix matrix inversion over ZZ</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Vincent Delecroix, John Palmieri</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28571'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28571'><span>#28571</span>: pass 'macaulay2' as argument to '_macaulay2_init_()'</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Franco Saliola</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28579'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28579'><span>#28579</span>: Wedge Product with Scalar Fields</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Michael Jung<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28582'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28582'><span>#28582</span>: some cleaning for is_ring</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<h2 id='sage90beta2'>sage-9.0.beta2</h2>
+
+<div class='ticket' id='t18957'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/18957'><span>#18957</span>: ehrhart_polynomial should be made available for polytopes defined over QQ</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Sophia Elia<br/>
+<strong>Reviewer(s):</strong> Jean-Philippe Labbé, Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t26403'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/26403'><span>#26403</span>: Compile Sage with Cython language_level=3str</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jeroen Demeyer<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28487'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28487'><span>#28487</span>: Morphisms from p-adic rings and fields</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Roe<br/>
+<strong>Reviewer(s):</strong> Xavier Caruso</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28508'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28508'><span>#28508</span>: An API for testing if a parent's element “are” real/complex numbers</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Marc Mezzarobba<br/>
+<strong>Reviewer(s):</strong> Vincent Delecroix</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28567'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28567'><span>#28567</span>: allow user to specify strategy for Groebner basis computations with Macaulay2</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Dima Pasechnik, Franco Saliola<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel, Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28569'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28569'><span>#28569</span>: Internal links broken in poset catalog</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Jori Mäntysalo</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28584'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28584'><span>#28584</span>: Three.js: Add render_order option for transparent objects</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Paul Masson<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28587'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28587'><span>#28587</span>: category of GL(1,ZZ)</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Thierry Monteil</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28588'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28588'><span>#28588</span>: Submultiset is broken</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Martin Rubey<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28590'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28590'><span>#28590</span>: convert Macaulay2 graphs to Sage graphs</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Franco Saliola<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28593'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28593'><span>#28593</span>: cleaning backslash and refresh doc in one file</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> John Palmieri</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28594'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28594'><span>#28594</span>: better categories for some groups</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Vincent Delecroix</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28595'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28595'><span>#28595</span>: convert some _cmp_ to _richcmp_</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28597'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28597'><span>#28597</span>: better category for arithmetic subgroups of SL2(ZZ)</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28607'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28607'><span>#28607</span>: CombinatorialPolyhedron: make f_vector a vector</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi</p>
+<dl>
+</dl></div>
+
+<h2 id='sage90beta3'>sage-9.0.beta3</h2>
+
+<div class='ticket' id='t20264'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/20264'><span>#20264</span>: Hasse-Weil Zeta function of a cyclic cover of P1 over finite fields.</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Vishal Arul, Edgar Costa, Richard Magner, Nicholas Triantafillou<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t27813'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/27813'><span>#27813</span>: Implement _im_gens_ for LaurentPolynomial_mpair</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Sebastian Oehms<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28155'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28155'><span>#28155</span>: Check for formality of GCDA's</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Miguel Marco, Victor Manero<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw, John Palmieri</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28159'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28159'><span>#28159</span>: Vector Bundles</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Michael Jung<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon, Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28463'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28463'><span>#28463</span>: .neighbors() error in polyhedron.representation</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Jean-Philippe Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28531'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28531'><span>#28531</span>: bliss canonical labels ignores edge labels</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Vincent Delecroix<br/>
+<strong>Reviewer(s):</strong> David coudert</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28562'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28562'><span>#28562</span>: Tensor Fields: Better Zero Treatment</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Michael Jung<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon, Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28600'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28600'><span>#28600</span>: Use standard notation for pullback and pushforward on manifolds</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Eric Gourgoulhon<br/>
+<strong>Reviewer(s):</strong> Michael Jung</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28601'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28601'><span>#28601</span>: some typos and https</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Thierry Monteil</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28603'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28603'><span>#28603</span>: CombinatorialPolyhedron: edge_graph -&gt; vertex_graph</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28604'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28604'><span>#28604</span>: CombinatorialPolyhedron: ridge_graph -&gt; facet_graph</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28619'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28619'><span>#28619</span>: Reference manual doesn't build with --include-tests-blocks</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28621'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28621'><span>#28621</span>: Add CombinatorialPolyhedron method to Polyhedron objects</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28625'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28625'><span>#28625</span>: Let CombinatorialPolyhedron handle f_vector of polyhedra</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28631'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28631'><span>#28631</span>: Implement polynomial factorization over universal cyclotomic field</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Sebastian Oehms<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28636'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28636'><span>#28636</span>: refresh the pieri_factors file</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28637'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28637'><span>#28637</span>: remove deprecated alias for algebraic dependency</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28642'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28642'><span>#28642</span>: Silence pyflakes warning</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Brent Baccala<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<h2 id='sage90beta4'>sage-9.0.beta4</h2>
+
+<div class='ticket' id='t18861'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/18861'><span>#18861</span>: Three apparently useless polyhedron methods</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jean-Philippe Labbé<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t25390'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/25390'><span>#25390</span>: multivariate factorization over QQbar</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Brent Baccala<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t26922'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/26922'><span>#26922</span>: Wrong f-vector for unbounded polyhedra</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Jean-Philippe Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t27866'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/27866'><span>#27866</span>: Introduce graphics insets</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Eric Gourgoulhon<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28126'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28126'><span>#28126</span>: Fix interact in ECM interface</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jerry James<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28182'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28182'><span>#28182</span>: Linear algorithm for squares in words</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Émile Nadeau<br/>
+<strong>Reviewer(s):</strong> Nadia Lafrenière, Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28334'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28334'><span>#28334</span>: py3: polynomial_rational_flint.pyx problem</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Steven Trogdon</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28414'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28414'><span>#28414</span>: p_group_cohomology does not build on Python3</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Simon King<br/>
+<strong>Reviewer(s):</strong> John Palmieri</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28429'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28429'><span>#28429</span>: Add the classical construction of the 120-cell</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jean-Philippe Labbé<br/>
+<strong>Reviewer(s):</strong> Jonathan Kliem</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28545'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28545'><span>#28545</span>: some cleanup in mod 2 tests</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28554'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28554'><span>#28554</span>: Scalar Field Restrictions</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Michael Jung<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28572'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28572'><span>#28572</span>: conversion of quotient rings to macaulay2</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Franco Saliola<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel, Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28591'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28591'><span>#28591</span>: convert chain complexes from Macaulay2 to Sage</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton, Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28622'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28622'><span>#28622</span>: Patchbot and Python 3 doctest failures</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton, ​Eric Gourgoulhon</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28628'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28628'><span>#28628</span>: Tensor Fields: set_restriction Behaviour</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Michael Jung<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28633'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28633'><span>#28633</span>: Add __copy__ method to backend normaliz of Polyhedron</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Jean-Philippe Labbé, Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28643'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28643'><span>#28643</span>: Speed up incidence matrix of polyhedra</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28644'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28644'><span>#28644</span>: unicode art fails for empty skew partition</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Martin Rubey</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28649'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28649'><span>#28649</span>: py3: flush output from FLINT error message</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik, Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28650'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28650'><span>#28650</span>: Fix the dimension of PolyhedronFace</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Laith Rastanawi<br/>
+<strong>Reviewer(s):</strong> Jonathan Kliem</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28655'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28655'><span>#28655</span>: Fix typos in the method 'is_combinatorially_isomorphic' of Polyhedron</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Laith Rastanawi<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28658'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28658'><span>#28658</span>: Three.js: Add popup menu for accessing additional options</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Paul Masson<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon, Jean-Philippe Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28659'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28659'><span>#28659</span>: fix #28631</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Vincent Delecroix<br/>
+<strong>Reviewer(s):</strong> Sebastian Oehms</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28661'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28661'><span>#28661</span>: macOS SageMath.app wait for wrong message, significantly delaying notebook launch</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Maverick Woo</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28662'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28662'><span>#28662</span>: Missing edges when visualizing Polyhedra with threejs</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Paul Masson<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon, Jean-Philippe Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28663'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28663'><span>#28663</span>: remove deprecated stuff in padics</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw, David Roe</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28665'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28665'><span>#28665</span>: speed up StandardPermutations_descents.cardinality</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Martin Rubey<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28666'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28666'><span>#28666</span>: dot2tex: typo in URL for graphviz</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28667'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28667'><span>#28667</span>: remove deprecated stuff in perfect matchings</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28668'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28668'><span>#28668</span>: fix the base_ring of face_split</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Laith Rastanawi<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28670'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28670'><span>#28670</span>: better category for matrix groups over finite rings</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28673'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28673'><span>#28673</span>: Do not create ipython symlink</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<h2 id='sage90beta5'>sage-9.0.beta5</h2>
+
+<div class='ticket' id='t27195'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/27195'><span>#27195</span>: slightly faster highest_weight_vectors_iterator</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Martin Rubey, Travis Scrimshaw<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28245'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28245'><span>#28245</span>: Implement center of a HyperplaneArrangement</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Julian Ritter<br/>
+<strong>Reviewer(s):</strong> Jean-Philippe Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28502'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28502'><span>#28502</span>: MR36: Use Sphinx hash function</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Julian Rüth<br/>
+<strong>Reviewer(s):</strong> John Palmieri</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28506'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28506'><span>#28506</span>: Direct sum of polyhedron is broken, so is minkowski difference and face truncation</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Jean-Philippe Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28574'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28574'><span>#28574</span>: conversion of nested polynomial rings to Macaulay2</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Franco Saliola, Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28578'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28578'><span>#28578</span>: Mixed Forms Code Improvements</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Michael Jung<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28645'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28645'><span>#28645</span>: Error in precision of Tate elliptic curves over Qp</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Chris Wuthrich<br/>
+<strong>Reviewer(s):</strong> Edgar Costa</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28657'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28657'><span>#28657</span>: Build Sage without "python"</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Volker Braun</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28669'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28669'><span>#28669</span>: Unnecessary coordinate check while initializing an integrated curve</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Eric Gourgoulhon<br/>
+<strong>Reviewer(s):</strong> Karim Van Aelst</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28674'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28674'><span>#28674</span>: RecursivelyEnumeratedSet: certified enumeration order</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw, Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28678'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28678'><span>#28678</span>: Bug in CombinatorialPolyhedron of empty Lattice polytope</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Jean-Philippe Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28681'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28681'><span>#28681</span>: py3: Construction of (A#A)+(A#A) fails for CombinatorialFreeModules</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Christian Nassau<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28687'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28687'><span>#28687</span>: Demote scons to experimental</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28690'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28690'><span>#28690</span>: Vector Bundles: Section Module Name Fix</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Michael Jung<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28691'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28691'><span>#28691</span>: Xcode 11 breaks gfortran build</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Volker Braun<br/>
+<strong>Reviewer(s):</strong> John Palmieri</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28693'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28693'><span>#28693</span>: Update sagenb exporter 3.3</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Volker Braun<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton, John Palmieri</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28699'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28699'><span>#28699</span>: Three.js: Upgrade to r110</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Paul Masson<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28702'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28702'><span>#28702</span>: Three.js: Add option to render only single side of surface</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Paul Masson<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon</p>
+<dl>
+</dl></div>
+
+<h2 id='sage90beta6'>sage-9.0.beta6</h2>
+
+<div class='ticket' id='t15077'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/15077'><span>#15077</span>: Inconsistency in polynomial .reverse(n)</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Bruno Grenet<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t24108'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/24108'><span>#24108</span>: quadratic_form_from_invariants()</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Simon Brandhorst<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t25183'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/25183'><span>#25183</span>: Bug in the associahedron object</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Jean-Philippe Labbé, Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t27089'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/27089'><span>#27089</span>: CPLEXBackend.solver_parameter: Handle CPX_PARAMTYPE_LONG</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t27302'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/27302'><span>#27302</span>: Cubic Braid Groups</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Sebastian Oehms<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw, Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t27761'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/27761'><span>#27761</span>: DES Block Cipher</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Lukas Stennes<br/>
+<strong>Reviewer(s):</strong> Friedrich Wiemer</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28104'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28104'><span>#28104</span>: Openblas build failure</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Volker Braun<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28382'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28382'><span>#28382</span>: Correct types in cplex backend</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28605'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28605'><span>#28605</span>: CombinatorialPolyhedron: replace attributes by methods</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi, Jean-Philippe Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28606'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28606'><span>#28606</span>: CombinatorialPolyhedron: unbounded -&gt; is_bounded</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi, Jean-Philippe Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28652'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28652'><span>#28652</span>: Rework the constructor of PermutationGroupElement</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Vincent Delecroix<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28660'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28660'><span>#28660</span>: Make Python 3 the default</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> John Palmieri, Eric Gourgoulhon</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28686'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28686'><span>#28686</span>: Demote some optional packages to experimental</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28689'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28689'><span>#28689</span>: py3: fix doctests with cbc</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> John Palmieri</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28700'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28700'><span>#28700</span>: Fixing missing optional flag in base_QQ.py</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Sophia Elia<br/>
+<strong>Reviewer(s):</strong> Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28707'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28707'><span>#28707</span>: More control on the numerical ODE solver for integrated curves and geodesics</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Eric Gourgoulhon<br/>
+<strong>Reviewer(s):</strong> Florentin Jaffredo</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28708'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28708'><span>#28708</span>: 5 cplex doctests failed in cplex_backend.pyx</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28709'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28709'><span>#28709</span>: Python executable in doctest/control.py</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> François Bissey</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28714'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28714'><span>#28714</span>: clarify docstring of plot.colors.float_to_integer</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Dave Morris<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28715'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28715'><span>#28715</span>: remove some deprecated stuff in combinat after 23319 and 15597</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28717'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28717'><span>#28717</span>: some cleanup in __init__ files</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28719'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28719'><span>#28719</span>: remove deprecated function aliases</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28721'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28721'><span>#28721</span>: Document sage-dist-helpers</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28725'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28725'><span>#28725</span>: fix lawrence_extension and lawrence_polytope for backend field</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Laith Rastanawi, Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi, Jonathan Kliem</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28726'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28726'><span>#28726</span>: py3: cysignals fails its test suite</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Volker Braun</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28730'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28730'><span>#28730</span>: cvxopt fails its test suite</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> François Bissey</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28734'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28734'><span>#28734</span>: a few miscellanous details</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<h2 id='sage90beta7'>sage-9.0.beta7</h2>
+
+<div class='ticket' id='t23816'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/23816'><span>#23816</span>: implement left action of matrices on scheme points</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Ben Hutz<br/>
+<strong>Reviewer(s):</strong> Adam Towsley, Henry Talbott, Matt Torrence, Bianca Thompson</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t27790'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/27790'><span>#27790</span>: compatibility with cplex 12.9</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t27838'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/27838'><span>#27838</span>: 5 internet doctests failing in findstat.py</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28214'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28214'><span>#28214</span>: Compute and display graph of nth-preimage tree</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Brandon Gontmacher, Joey Lupo, Wayne Peng<br/>
+<strong>Reviewer(s):</strong> Adam Towsley</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28304'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28304'><span>#28304</span>: add type information to _repr_ of Macaulay2 elements</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik, Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28564'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28564'><span>#28564</span>: Tensor Fields and Sections: Naming Consistencies</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Michael Jung<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon, Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28675'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28675'><span>#28675</span>: Deprecate GraphicsArray import from sage.plot.graphics</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Eric Gourgoulhon<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28685'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28685'><span>#28685</span>: Upgrade from beautifulsoup to beautifulsoup4</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28698'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28698'><span>#28698</span>: py3: HTML documentation for GlobalOptions does not show up correctly</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Kwankyu Lee<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28732'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28732'><span>#28732</span>: update sagetex to version 3.4</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Dima Pasechnik<br/>
+<strong>Reviewer(s):</strong> John Palmieri, Karl-Dieter Crisman</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28736'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28736'><span>#28736</span>: fix Texture for negative inputs</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Jori Mäntysalo</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28737'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28737'><span>#28737</span>: remove deprecated stuff in old coercion model</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28748'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28748'><span>#28748</span>: Python 3 debug build fails to start</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Volker Braun<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28795'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28795'><span>#28795</span>: Python 3 overflow in IntegerModRing pow</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Volker Braun<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28797'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28797'><span>#28797</span>: 32-bit Python 3 failures in combinat</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Volker Braun</p>
+<dl>
+</dl></div>
+
+<h2 id='sage90beta8'>sage-9.0.beta8</h2>
+
+<div class='ticket' id='t22380'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/22380'><span>#22380</span>: Upgrade to cvxopt 1.2.x</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> François Bissey<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t23720'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/23720'><span>#23720</span>: Plotting Mandelbrot Set for General Polynomials</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Ben Barros, Ben Hutz<br/>
+<strong>Reviewer(s):</strong> Ben Hutz, Adam Towsley, A. S. Dasher</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t23740'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/23740'><span>#23740</span>: Plotting Julia Sets for General Polynomials</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Ben Barros, Andrew O'Desky<br/>
+<strong>Reviewer(s):</strong> Adam Towsley, Ben Hutz</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t25701'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/25701'><span>#25701</span>: Implement Sieve algorithm for product_projective space</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Raghukul Raman, Ben Hutz<br/>
+<strong>Reviewer(s):</strong> Adam Towsley, A. S. Dasher</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t26816'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/26816'><span>#26816</span>: Specify subgroups of Galois groups using generators</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Peter Bruin<br/>
+<strong>Reviewer(s):</strong> David Roe</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t26817'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/26817'><span>#26817</span>: GaloisGroup_subgroup.fixed_field() should always return an embedding</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Peter Bruin<br/>
+<strong>Reviewer(s):</strong> David Roe</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t27154'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/27154'><span>#27154</span>: speed_up_Burge</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Martin Rubey<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t27408'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/27408'><span>#27408</span>: Edge view for graphs</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> Jeroen Demeyer, Vincent Delecroix, Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t27784'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/27784'><span>#27784</span>: Characteristic Classes on Vector Bundles</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Michael Jung<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw, Eric Gourgoulhon</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28170'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28170'><span>#28170</span>: enhance is_postcritically_finite, critical_point_portrait, and multiplier_spectra to work over number fields and finite fields</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Heidi Benham, Julia Cai, Leopold Mayer, Ben Hutz<br/>
+<strong>Reviewer(s):</strong> Meghan Grip, Talia Blum, John Doyle, Alexis Suki Dasher, John Michael Clark</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28213'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28213'><span>#28213</span>: Renaming rational_preperiodic_points() to all_preperiodic_points()</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Eric Zhu, Alex Galarraga, Bianca Thompson, Ben Hutz<br/>
+<strong>Reviewer(s):</strong> Jasmine Camero, Olivia Schwager, Anna Chlopecki, Simon Xu, Grayson Jorgenson, Juliano Levier-Gomes, Ben Hutz, Jamie Juul, Bella Tobin</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28489'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28489'><span>#28489</span>: py3 + OS X: symbolic/expression.pyx</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Volker Braun</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28501'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28501'><span>#28501</span>: MR35: Honour docbuild limits when building documentation in Dockerfile</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Julian Rüth<br/>
+<strong>Reviewer(s):</strong> Volker Braun</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28583'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28583'><span>#28583</span>: unicode_art of Matrix_mod2_dense fails</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28614'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28614'><span>#28614</span>: CombinatorialPolyhedron: length_* to n_*</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28627'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28627'><span>#28627</span>: Lazy OEIS sequences</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Thierry Monteil<br/>
+<strong>Reviewer(s):</strong> Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28680'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28680'><span>#28680</span>: Three.js: Update documentation examples</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Paul Masson<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28694'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28694'><span>#28694</span>: rich comparison for matrices</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28705'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28705'><span>#28705</span>: Fix conversion of Booleans in interfaces</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Vincent Delecroix</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28716'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28716'><span>#28716</span>: Construction of a vector frame from a family of vector fields</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Eric Gourgoulhon<br/>
+<strong>Reviewer(s):</strong> Michael Jung</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28720'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28720'><span>#28720</span>: Method is_diagonalizable() should not raise an error for legitimate inputs</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Kwankyu Lee<br/>
+<strong>Reviewer(s):</strong> Vincent Delecroix</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28733'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28733'><span>#28733</span>: Reference manual SageTeX incorrect link</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Dima Pasechnik<br/>
+<strong>Reviewer(s):</strong> Karl-Dieter Crisman</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28739'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28739'><span>#28739</span>: cleaning "space:" in the doc of combinat</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28740'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28740'><span>#28740</span>: fix typo convertable</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Jori Mäntysalo</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28741'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28741'><span>#28741</span>: Lattice Polytopes: `compute_facets` does not check dimension when setting is_reflexive</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Andrey Novoseltsev</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28744'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28744'><span>#28744</span>: py3: add bytes_to_str in Octave interface</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28747'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28747'><span>#28747</span>: further "space:" cleaning outside of combinat</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28749'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28749'><span>#28749</span>: some middle-scale cleanup Returns ==&gt; Return in the doc</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28751'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28751'><span>#28751</span>: enhance some calls to "while len"</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Jori Mäntysalo, Léo Brunswic</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28756'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28756'><span>#28756</span>: py3: fix doctests with gurobi</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28758'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28758'><span>#28758</span>: random output in a giacpy_sage doctest</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28759'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28759'><span>#28759</span>: py3: dot2tex + graphviz doctests failures</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28760'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28760'><span>#28760</span>: py3: internet str vs bytes doctests failures</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28761'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28761'><span>#28761</span>: py3: further fixes for misc</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28763'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28763'><span>#28763</span>: DIMACS solver not workng with Python3 (7 glucose optional doctests failed)</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Thierry Monteil<br/>
+<strong>Reviewer(s):</strong> Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28764'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28764'><span>#28764</span>: 2 internet doctest failed in hadamard_matrix.py</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Sébastien Labbé</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28769'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28769'><span>#28769</span>: Scalar field raise AttributeError on show_identifiers call</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Eric Gourgoulhon<br/>
+<strong>Reviewer(s):</strong> Léo Brunswic</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28770'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28770'><span>#28770</span>: Polyhedra coercion of base rings fails for number fields</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Léo Brunswic</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28779'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28779'><span>#28779</span>: Error in "primes_of_bad_reduction" for DynamicalSystem</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Paul Fili<br/>
+<strong>Reviewer(s):</strong> Adam Towsley</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28783'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28783'><span>#28783</span>: fix opacity for add_condition in mono-coloured plot3d</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Karl-Dieter Crisman</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28784'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28784'><span>#28784</span>: Adding multiple symmetries and multiple contractions to tensors</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Léo Brunswic<br/>
+<strong>Reviewer(s):</strong> Eric Gourgoulhon</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28790'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28790'><span>#28790</span>: https in README.md</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Jori Mäntysalo</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28791'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28791'><span>#28791</span>: Implement Feature without using sage.misc.cachefunc, sage.structure.unique_representation</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Matthias Koeppe<br/>
+<strong>Reviewer(s):</strong> François Bissey</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28793'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28793'><span>#28793</span>: 2 more random doctest failures</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28805'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28805'><span>#28805</span>: Remove sagenb from DOC_DEPENDENCIES</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> François Bissey, John Palmieri<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28807'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28807'><span>#28807</span>: little typo ticket</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Jori Mäntysalo</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28809'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28809'><span>#28809</span>: cleanup src/sage/combinat/partition_shifting_algebras.py</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28810'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28810'><span>#28810</span>: small fix in regular expression for trac warning in sage/all.py</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28811'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28811'><span>#28811</span>: add hash for hypergeometric motives</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28812'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28812'><span>#28812</span>: #28795 followup: py2 doctest failure in pynac.pyx</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28820'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28820'><span>#28820</span>: convert guava interface to libgap</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Dima Pasechnik<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28823'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28823'><span>#28823</span>: str_to_bytes in math-readline script for Mathematica console</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28824'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28824'><span>#28824</span>: make doc-pdf race condition</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Volker Braun<br/>
+<strong>Reviewer(s):</strong> Steven Trogdon</p>
+<dl>
+</dl></div>
+
+<h2 id='sage90beta9'>sage-9.0.beta9</h2>
+
+<div class='ticket' id='t24398'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/24398'><span>#24398</span>: Document function initialization parameters</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Ralf Stephan<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel, Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28258'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28258'><span>#28258</span>: Fork errors in sage.misc.cython doctests</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Erik Bray<br/>
+<strong>Reviewer(s):</strong> Volker Braun</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28289'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28289'><span>#28289</span>: Settings in ipython_config.py can cause tests to fail</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Erik Bray<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28476'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28476'><span>#28476</span>: norm returns a negative number</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Dave Morris<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28541'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28541'><span>#28541</span>: bug in change_ring for polynomials</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Xavier Caruso<br/>
+<strong>Reviewer(s):</strong> Marc Mezzarobba, Markus Wageringel</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28639'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28639'><span>#28639</span>: Polyhedron_normaliz: Initialize new cone from both Vrep and Hrep</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28710'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28710'><span>#28710</span>: update sagenb to 1.1.3</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Dima Pasechnik<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28792'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28792'><span>#28792</span>: SageNB, message about removal</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Jori Mäntysalo</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28801'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28801'><span>#28801</span>: Fix ThreeJS script paths for Firefox on Windows</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Erik Bray<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28818'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28818'><span>#28818</span>: from gap to libgap in strongly_regular_db</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Dima Pasechnik<br/>
+<strong>Reviewer(s):</strong> David Coudert</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28821'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28821'><span>#28821</span>: get rid of filter</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28822'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28822'><span>#28822</span>: Use assert on a condition that should always be true</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Brent Baccala<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28825'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28825'><span>#28825</span>: refresh the file combinat/tuple</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28826'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28826'><span>#28826</span>: a few typos</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28830'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28830'><span>#28830</span>: cleaning the file dlx.py</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28833'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28833'><span>#28833</span>: ResourceWarning: unclosed file with SAGE_DEBUG=yes</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Volker Braun</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28834'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28834'><span>#28834</span>: Doctesting: don't test SageNB files unless SageNB has been installed</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28835'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28835'><span>#28835</span>: Remove python3-known-passing.txt and the corresponding parts of the Makefile</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> John Palmieri<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28839'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28839'><span>#28839</span>: adding a minimal lgtm.yml file</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Erik Bray</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28840'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28840'><span>#28840</span>: pari 2.11.2</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> François Bissey</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28841'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28841'><span>#28841</span>: fix some little details in doc</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28843'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28843'><span>#28843</span>: typo ticket: explicitely -&gt; explicitly</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Martin Rubey<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<h2 id='sage90beta10'>sage-9.0.beta10</h2>
+
+<div class='ticket' id='t12679'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/12679'><span>#12679</span>: rewrite Matrix_modn_sparse and vector_modn_sparse code so that the modulus is 64-bit on 64-bit platforms</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t15645'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/15645'><span>#15645</span>: Raise coverage of schemes/hyperelliptic_curves/monsky_washnitzer.py to 100%</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Kiran Kedlaya<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t17339'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/17339'><span>#17339</span>: Polyhedron class mistreats empty inputs</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Darij Grinberg, Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t26332'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/26332'><span>#26332</span>: Remove the ore_algebra optional package</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Thierry Monteil, Marc Mezzarobba<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28326'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28326'><span>#28326</span>: Restore default term state after printing environment variables</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Henri Derycke<br/>
+<strong>Reviewer(s):</strong> Erik Bray</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28329'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28329'><span>#28329</span>: Suppress warnings from failed psutil statistics collection</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Michael Orlitzky<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik, Markus Wageringel</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28355'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28355'><span>#28355</span>: Allow precision to be passed into the elliptic_j function</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Gerardo E Zelaya Eufemia, Kevin Lui<br/>
+<strong>Reviewer(s):</strong> Kevin Lui, Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28374'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28374'><span>#28374</span>: MR31: Build documentation artifacts during docker build</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Julian Rüth<br/>
+<strong>Reviewer(s):</strong> Samuel Lelièvre</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28507'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28507'><span>#28507</span>: MR37: Update symlinks in the docker -dev image</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Julian Rüth<br/>
+<strong>Reviewer(s):</strong> Samuel Lelièvre</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28533'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28533'><span>#28533</span>: Remove adding /usr/include/$MULTI_ARCH to CPATH</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Isuru Fernando<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28596'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28596'><span>#28596</span>: Fix jmol permissions</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Erik Bray<br/>
+<strong>Reviewer(s):</strong> John Palmieri</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28613'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28613'><span>#28613</span>: CombinatorialPolyhedron: attributes, H -&gt; facet_names; V -&gt; Vrep</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28632'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28632'><span>#28632</span>: Implement Eulerian Polynomials and Numbers</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28684'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28684'><span>#28684</span>: Fixing precision of Tate elliptic curves over Qp</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Edgar Costa<br/>
+<strong>Reviewer(s):</strong> Chris Wuthrich</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28743'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28743'><span>#28743</span>: Lattice Polytopes: Implement incidence matrix</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton, Laith Rastanawi</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28762'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28762'><span>#28762</span>: 2 doctests failed in cmdline.py related to rst2ipynb</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Sébastien Labbé<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28766'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28766'><span>#28766</span>: Implement incidence matrix for cones</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28789'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28789'><span>#28789</span>: Zeta functions of hyperelliptic curves giving wrong answers</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Kiran Kedlaya<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28808'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28808'><span>#28808</span>: failing internet doctest in repl/load.py</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28819'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28819'><span>#28819</span>: disable problematic external doctests</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Kwankyu Lee</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28828'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28828'><span>#28828</span>: Attributes of polyhedra are exposed</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28829'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28829'><span>#28829</span>: suitesparse does not build on Cygwin</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Erik Bray<br/>
+<strong>Reviewer(s):</strong> François Bissey</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28832'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28832'><span>#28832</span>: suitesparse spkg does not properly use a DESTDIR installation</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Erik Bray, François Bissey<br/>
+<strong>Reviewer(s):</strong> François Bissey, Erik Bray</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28842'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28842'><span>#28842</span>: Uncaught AttributeError in integrate()</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Eric Gourgoulhon<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28844'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28844'><span>#28844</span>: some details in heegner.py</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Jori Mäntysalo</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28845'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28845'><span>#28845</span>: cleaning tableau residues.py</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28847'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28847'><span>#28847</span>: better unicode art for chain complex</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Markus Wageringel</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28849'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28849'><span>#28849</span>: clean the doc of Monte Carlo integration</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28850'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28850'><span>#28850</span>: Polar of polytopes does not check if polytope is full-dimensional</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28851'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28851'><span>#28851</span>: Polar of integer polytopes does not respect backend</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28858'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28858'><span>#28858</span>: Fix frobby interface with python3</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Miguel Marco<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28859'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28859'><span>#28859</span>: some enhanced tests in schemes folder</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28860'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28860'><span>#28860</span>: some trivial fixes for space around = in combinat</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28861'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28861'><span>#28861</span>: change some returns to return</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> André Apitzsch</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28863'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28863'><span>#28863</span>: 1 doctest failed in thematic_tutorials/linear_programming.rst</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Sébastien Labbé<br/>
+<strong>Reviewer(s):</strong> David Coudert</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28872'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28872'><span>#28872</span>: Wrong usage of normaliz/pynormaliz makes sage crash hard</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28874'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28874'><span>#28874</span>: Meaningful errors for immutable graphs</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28875'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28875'><span>#28875</span>: use https in setup.py</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28876'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28876'><span>#28876</span>: Polyhedron: Let affine hull fully respect backend</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28877'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28877'><span>#28877</span>: Upgrade R to 3.6.2</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Emmanuel Charpentier<br/>
+<strong>Reviewer(s):</strong> Erik Bray</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28881'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28881'><span>#28881</span>: refresh the shuffle algebra file</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton, Travis Scrimshaw<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw, Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28887'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28887'><span>#28887</span>: remove some deprecated function aliases</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28888'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28888'><span>#28888</span>: refresh the file ell_finite_field</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Jori Mäntysalo</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28891'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28891'><span>#28891</span>: character art and sympy-conversion of symbolic series</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Markus Wageringel<br/>
+<strong>Reviewer(s):</strong> Frédéric Chapoton</p>
+<dl>
+</dl></div>
+
+<h2 id='sage90rc0'>sage-9.0.rc0</h2>
+
+<div class='ticket' id='t28094'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28094'><span>#28094</span>: support function fields in characteristic zero</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Brent Baccala<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw, Kwankyu Lee</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28309'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28309'><span>#28309</span>: improvement of method allow_multiple_edges</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> Jonathan Kliem</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28654'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28654'><span>#28654</span>: A Bug in the backend `field`</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> Laith Rastanawi</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28837'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28837'><span>#28837</span>: Flow polytope does not work as expected on Multi-Digraphs</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> David Coudert<br/>
+<strong>Reviewer(s):</strong> Jonas Frede</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28885'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28885'><span>#28885</span>: spkg-configure for cliquer</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Dima Pasechnik<br/>
+<strong>Reviewer(s):</strong> Isuru Fernando</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28896'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28896'><span>#28896</span>: Graphs: Move common methods of backends to CGraph</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Jonathan Kliem<br/>
+<strong>Reviewer(s):</strong> David Coudert</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28898'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28898'><span>#28898</span>: pep cleanup in quivers/</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28900'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28900'><span>#28900</span>: some details in schemes/</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Frédéric Chapoton<br/>
+<strong>Reviewer(s):</strong> Travis Scrimshaw</p>
+<dl>
+</dl></div>
+
+<h2 id='sage90rc1'>sage-9.0.rc1</h2>
+
+<div class='ticket' id='t28676'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28676'><span>#28676</span>: Pass --with-python=sage-python23 to Singular configure</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Matthias Koeppe<br/>
+<strong>Reviewer(s):</strong> Dima Pasechnik</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28878'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28878'><span>#28878</span>: psutil doesn't build on recent Cygwin</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Erik Bray<br/>
+<strong>Reviewer(s):</strong> Volker Braun</p>
+<dl>
+</dl></div>
+
+<div class='ticket' id='t28910'>
+<h3><a href='http://trac.sagemath.org/sage_trac/ticket/28910'><span>#28910</span>: Update "Maintained" to 2020 for DockerHub README</a></h3>
+<p>
+<strong class='error'>Ticket not yet marked as merged</strong><br/>
+<strong>Author(s):</strong> Samuel Lelièvre<br/>
+<strong>Reviewer(s):</strong> Julian Rüth</p>
+<dl>
+</dl></div>
+
+</body>
+</html>
