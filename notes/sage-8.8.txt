@@ -1,4 +1,4 @@
-﻿Sage 8.8 was released on 26 June 2019. It is available in
+﻿Sage 8.8 was released on 2019-06-26. It is available in
 source and binary form from:
 
   * http://www.sagemath.org/download.html
@@ -21,7 +21,7 @@ these Google groups:
 You can also drop by in #sagemath on freenode or post your questions
 at http://ask.sagemath.org/
 
-The following 83 people contributed to this release. Of those, 16 made
+The following 81 people contributed to this release. Of those, 15 made
 their first contribution to Sage:
 
   - Abhay Pratap Singh [first contribution]
@@ -77,7 +77,6 @@ their first contribution to Sage:
   - Miguel Marco
   - Mihail Tarigradschi [first contribution]
   - Nicolas M. Thiéry
-  - Nicolas Thiery
   - Nils Bruin
   - Nithish Saji [first contribution]
   - Odile Bénassy
@@ -99,7 +98,6 @@ their first contribution to Sage:
   - Thierry Monteil
   - Timo Kaufmann
   - Tobias Hansen
-  - Travis  Scrimshaw [first contribution]
   - Travis Scrimshaw
   - Victor Manero [first contribution]
   - Vincent Delecroix
@@ -285,7 +283,7 @@ Merged in sage-8.8.beta4:
 #27670: Brent Baccala: package install can print confusing error messages [Reviewed by Erik Bray]
 #27679: Daniel Krenn: py3: finite state machines [Reviewed by Travis Scrimshaw]
 #27682: Vincent Delecroix, Matthias Koeppe: upgrade normaliz to 3.7.1, pynormaliz to 2.1 and package e-antic [Reviewed by Jean-Philippe Labbé, Travis Scrimshaw]
-#27684: Travis Scrimshaw: Upgrade dot2tex to 2.11.3 [Reviewed by Anne Schilling, Nicolas Thiery]
+#27684: Travis Scrimshaw: Upgrade dot2tex to 2.11.3 [Reviewed by Anne Schilling, Nicolas M. Thiéry]
 #27688: Jeroen Demeyer: matrix_from_columns() assertion failure [Reviewed by François Bissey]
 #27690: Frédéric Chapoton: unicode art for knots [Reviewed by Travis Scrimshaw]
 #27691: Frédéric Chapoton: py3: care for two files in misc [Reviewed by Travis Scrimshaw]
@@ -301,7 +299,7 @@ Merged in sage-8.8.beta4:
 #27715: Erik Bray: Jupyter notebook can crash during startup if default port cannot be used [Reviewed by Travis Scrimshaw]
 #27716: Matthias Koeppe: Refactor backend_normaliz [Reviewed by Jean-Philippe Labbé]
 #27719: John Palmieri, Nils Bruin: Preparser for file.sage: treat "from __future__ import ..." properly [Reviewed by Nils Bruin, John Palmieri]
-#27722: Jean-Philippe Labbé: Remove old deprecation warning of Minkowski -> minkowski [Reviewed by Frédéric Chapoton, Travis  Scrimshaw]
+#27722: Jean-Philippe Labbé: Remove old deprecation warning of Minkowski -> minkowski [Reviewed by Frédéric Chapoton, Travis Scrimshaw]
 #27723: Frédéric Chapoton: pyflakes cleanup in schemes [Reviewed by Travis Scrimshaw]
 #27725: Frédéric Chapoton: pyflakes cleanup in matroids [Reviewed by Travis Scrimshaw]
 #27726: Frédéric Chapoton: some cleanup in quadratic forms [Reviewed by Travis Scrimshaw]
