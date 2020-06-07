@@ -4,28 +4,12 @@ source and binary form from:
   * http://www.sagemath.org/download.html
 
 Sage (http://www.sagemath.org/) is developed by volunteers and combines
-over 90 open source packages. For instructions about installing Sage, see
+hundreds of open source packages.
 
-  * http://doc.sagemath.org/html/en/installation/index.html
-
-The following page lists the platforms on which Sage should work:
-
-  * http://wiki.sagemath.org/SupportedPlatforms
-
-If you have any questions and/or problems, please report them to any of
-these Google groups:
-
-  * sage-support: http://groups.google.com/group/sage-support
-  * sage-devel: http://groups.google.com/group/sage-devel
-
-You can also drop by in #sagemath on freenode or post your questions
-at http://ask.sagemath.org/
-
-The following 110 people contributed to this release. Of those, 29 made
+The following 106 people contributed to this release. Of those, 25 made
 their first contribution to Sage:
 
   - Adam Towsley
-  - Alex J.  Best [first contribution]
   - Alex J. Best
   - Amaury Durand
   - Andrew Mathas
@@ -40,8 +24,7 @@ their first contribution to Sage:
   - Chao Xu
   - Chris Swierczewski
   - Chris Wuthrich
-  - Christian Wuthrich [first contribution]
-  - Clément Chrétien; Thomas Petiteau; Vipul Gupta [first contribution]
+  - Clément Chrétien [first contribution]
   - Darij Grinberg
   - Dave Morris
   - David Coudert
@@ -53,7 +36,6 @@ their first contribution to Sage:
   - Emmanuel Charpentier
   - Eric Gourgoulhon
   - Erik Bray
-  - Erik M. Bray [first contribution]
   - Ferdinand Ihringer [first contribution]
   - François Bissey
   - Frédéric Chapoton
@@ -80,7 +62,6 @@ their first contribution to Sage:
   - Kiran Kedlaya
   - Kwankyu Lee
   - Laith Rastanawi
-  - Laith Rastanwi [first contribution]
   - Lothar Schiemanowski [first contribution]
   - Léo Brunswic
   - Mahathi Vempati [first contribution]
@@ -121,12 +102,12 @@ their first contribution to Sage:
   - Talia Blum
   - Thibaut Verron
   - Thierry Monteil
+  - Thomas Petiteau [first contribution]
   - Timo Kaufmann
   - Tobias Hansen
   - Torakozo Kariya [first contribution]
   - Travis Scrimshaw
   - Varenyam Bakshi [first contribution]
-  - Varenyam bakshi [first contribution]
   - Vincent Delecroix
   - Vincent Klein
   - Vipul Gupta [first contribution]
@@ -358,7 +339,7 @@ Merged in sage-9.1.beta5:
 #28964: Markus Wageringel: sympy: Problem with integration/differentiation of symbolic functions. [Reviewed by Vincent Delecroix]
 #29089: Matthias Koeppe: Also gfortran needs the crti.o fix - for Fedora 31/32 [Reviewed by Volker Braun]
 #29117: Jonathan Kliem: Implement a maximal chain for combinatorial polyhedron [Reviewed by Jean-Philippe Labbé, Laith Rastanawi]
-#29126: Alex J.  Best: Add a lmfdb_page function for number fields [Reviewed by Frédéric Chapoton]
+#29126: Alex J. Best: Add a lmfdb_page function for number fields [Reviewed by Frédéric Chapoton]
 #29140: Markus Wageringel: sagedoc introspection removes all backslashes [Reviewed by Vincent Delecroix]
 #29150: Erik Bray: DESTDIR support for coxeter3 [Reviewed by Travis Scrimshaw]
 #29154: Kwankyu Lee: Add get_place(degree) to global function fields [Reviewed by Travis Scrimshaw]
@@ -380,9 +361,9 @@ Merged in sage-9.1.beta6:
 #15398: Saket Bhatt: wrong output of %timeit [Reviewed by Paul Zimmermann]
 #17405: Peter Wicks Stringfield, Jeroen Demeyer, Markus Wageringel: solve_right with matrix right hand side fails over RDF and CDF [Reviewed by Vincent Delecroix]
 #19225: Peter Bruin: cartesian product of algebra has troubles with base_ring [Reviewed by Travis Scrimshaw]
-#21046: Chris Wuthrich: Numerical modular symbols for elliptic curves [Reviewed by Varenyam bakshi]
+#21046: Chris Wuthrich: Numerical modular symbols for elliptic curves [Reviewed by Varenyam Bakshi]
 #21785: Matthias Koeppe: Install SAGE_SRC/ext/ in package data of sage package by setup.py, not SAGE_LOCAL/share/sage/ext/ by build/make/Makefile [Reviewed by François Bissey]
-#23115: Clément Chrétien; Thomas Petiteau; Vipul Gupta: Spanning tree method for DiGraph [Reviewed by David Coudert, Travis Scrimshaw]
+#23115: Clément Chrétien, Thomas Petiteau, Vipul Gupta: Spanning tree method for DiGraph [Reviewed by David Coudert, Travis Scrimshaw]
 #24571: Simon Brandhorst: Orthogonal groups of TorsionQuadraticModules [Reviewed by Travis Scrimshaw]
 #25997: Simon King: Fix bug in matrix space with prescribed implementation [Reviewed by Vincent Delecroix]
 #26623: Michael Orlitzky: Constructions for common polyhedral cones [Reviewed by Jonathan Kliem]
@@ -391,7 +372,7 @@ Merged in sage-9.1.beta6:
 #27891: Markus Wageringel: Add options for flipping plot axes [Reviewed by Vincent Delecroix]
 #28413: Sophia Elia: Add .h_star_vector to compact rational polytopes [Reviewed by Jean-Philippe Labbé]
 #28490: Vincent Delecroix, John Palmieri: Let Sage honour PEP 515 (py3) [Reviewed by Thierry Monteil, Vincent Delecroix, John Palmieri]
-#28817: Volker Braun, Erik M. Bray: exponent too large to convert to mpfr2 (32-bit) [Reviewed by Erik M. Bray, Volker Braun, Dima Pasechnik]
+#28817: Volker Braun, Erik Bray: exponent too large to convert to mpfr2 (32-bit) [Reviewed by Erik Bray, Volker Braun, Dima Pasechnik]
 #28854: Michael Jung: Documentation Improvements of Characteristic Classes [Reviewed by Varenyam Bakshi]
 #28963: Michael Jung: Vector Bundles: Documentation Improvements [Reviewed by Eric Gourgoulhon]
 #29052: Matthias Koeppe: Create build/bin/sage-build-env-config and call it from build/make/deps; add sage --buildsh [Reviewed by Dima Pasechnik, Volker Braun]
@@ -404,7 +385,7 @@ Merged in sage-9.1.beta6:
 #29219: Markus Wageringel: avoid numpy warning in condition number of CDF matrices [Reviewed by Travis Scrimshaw]
 #29220: Vincent Delecroix: comparison in AA not reliable [Reviewed by Julian Rüth]
 #29223: Jonathan Kliem: Pickle cached value of volume and f-vector [Reviewed by Laith Rastanawi]
-#29224: Jonathan Kliem, Laith Rastanwi: `flag_f_vector` for polyhedra [Reviewed by Jean-Philippe Labbé]
+#29224: Jonathan Kliem, Laith Rastanawi: `flag_f_vector` for polyhedra [Reviewed by Jean-Philippe Labbé]
 #29225: Peter Bruin: Cartesian product of modules has no base ring [Reviewed by Travis Scrimshaw]
 #29233: Matthias Koeppe: bootstrap && make distclean broken [Reviewed by Dima Pasechnik]
 #29238: Frédéric Chapoton: fix some details suggested by lgtm [Reviewed by Travis Scrimshaw]
@@ -650,7 +631,7 @@ Merged in sage-9.1.rc2:
 #28976: Julian Rüth: AssertionError when creating valuations from prime ideals [Reviewed by Vincent Delecroix]
 #29186: Jonathan Kliem: Add simplicity and simpliciality to polyhedra [Reviewed by Jean-Philippe Labbé]
 #29188: Jonathan Kliem: Move vertex facet graph to combinatorial polyhedron [Reviewed by Jean-Philippe Labbé]
-#29290: Matthias Koeppe, Christian Wuthrich: sage.schemes.elliptic_curves.mod_sym_num breaks Cygwin build (9.1.beta6) [Reviewed by Christian Wuthrich, Matthias Koeppe]
+#29290: Matthias Koeppe, Chris Wuthrich: sage.schemes.elliptic_curves.mod_sym_num breaks Cygwin build (9.1.beta6) [Reviewed by Chris Wuthrich, Matthias Koeppe]
 #29341: Matthias Koeppe: GitHub CI workflow: Add testing of optional packages [Reviewed by Dima Pasechnik]
 #29347: Siddharth Singh: Signed Representation [Reviewed by Travis Scrimshaw]
 #29382: Volker Braun, Jonathan Kliem: Compute the centroid of a polytope [Reviewed by Laith Rastanawi, Jean-Philippe Labbé]

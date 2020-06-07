@@ -1,27 +1,12 @@
-﻿Sage 9.0 was released on 1 January 2020. It is available in
+﻿Sage 9.0 was released on 2020-01-01. It is available in
 source and binary form from:
 
   * http://www.sagemath.org/download.html
 
 Sage (http://www.sagemath.org/) is developed by volunteers and combines
-over 90 open source packages. For instructions about installing Sage, see
+hundreds of open source packages.
 
-  * http://doc.sagemath.org/html/en/installation/index.html
-
-The following page lists the platforms on which Sage should work:
-
-  * http://wiki.sagemath.org/SupportedPlatforms
-
-If you have any questions and/or problems, please report them to any of
-these Google groups:
-
-  * sage-support: http://groups.google.com/group/sage-support
-  * sage-devel: http://groups.google.com/group/sage-devel
-
-You can also drop by in #sagemath on freenode or post your questions
-at http://ask.sagemath.org/
-
-The following 118 people contributed to this release. Of those, 18 made
+The following 116 people contributed to this release. Of those, 16 made
 their first contribution to Sage:
 
   - A. S. Dasher [first contribution]
@@ -50,7 +35,6 @@ their first contribution to Sage:
   - David Coudert
   - David Einstein
   - David Roe
-  - David coudert [first contribution]
   - Dima Pasechnik
   - Durand Amaury [first contribution]
   - Edgar Costa
@@ -141,7 +125,6 @@ their first contribution to Sage:
   - Wayne Peng
   - Xavier Caruso
   - Émile Nadeau
-  - ​Eric Gourgoulhon [first contribution]
 
 * Release manager: Volker Braun.
 
@@ -271,7 +254,7 @@ Merged in sage-9.0.beta3:
 #28155: Miguel Marco, Victor Manero: Check for formality of GCDA's [Reviewed by Travis Scrimshaw, John Palmieri]
 #28159: Michael Jung: Vector Bundles [Reviewed by Eric Gourgoulhon, Travis Scrimshaw]
 #28463: Jonathan Kliem: .neighbors() error in polyhedron.representation [Reviewed by Jean-Philippe Labbé]
-#28531: Vincent Delecroix: bliss canonical labels ignores edge labels [Reviewed by David coudert]
+#28531: Vincent Delecroix: bliss canonical labels ignores edge labels [Reviewed by David Coudert]
 #28562: Michael Jung: Tensor Fields: Better Zero Treatment [Reviewed by Eric Gourgoulhon, Travis Scrimshaw]
 #28600: Eric Gourgoulhon: Use standard notation for pullback and pushforward on manifolds [Reviewed by Michael Jung]
 #28601: Frédéric Chapoton: some typos and https [Reviewed by Thierry Monteil]
@@ -300,7 +283,7 @@ Merged in sage-9.0.beta4:
 #28554: Michael Jung: Scalar Field Restrictions [Reviewed by Eric Gourgoulhon]
 #28572: Franco Saliola: conversion of quotient rings to macaulay2 [Reviewed by Markus Wageringel, Dima Pasechnik]
 #28591: Markus Wageringel: convert chain complexes from Macaulay2 to Sage [Reviewed by Frédéric Chapoton, Dima Pasechnik]
-#28622: John Palmieri: Patchbot and Python 3 doctest failures [Reviewed by Frédéric Chapoton, ​Eric Gourgoulhon]
+#28622: John Palmieri: Patchbot and Python 3 doctest failures [Reviewed by Frédéric Chapoton, Eric Gourgoulhon]
 #28628: Michael Jung: Tensor Fields: set_restriction Behaviour [Reviewed by Eric Gourgoulhon]
 #28633: Jonathan Kliem: Add __copy__ method to backend normaliz of Polyhedron [Reviewed by Jean-Philippe Labbé, Travis Scrimshaw]
 #28643: Jonathan Kliem: Speed up incidence matrix of polyhedra [Reviewed by Laith Rastanawi]
