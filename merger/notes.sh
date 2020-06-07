@@ -50,6 +50,7 @@ while read version ticket; do
 	sed -f "$MERGER_DIR/escapehtml.sed" <tickets/$ticket >tickets/$ticket.html
 done <tickets.log
 
+
 # Make list of contributors (authors and reviewers)
 while read version ticket; do
 	sed <tickets/$ticket -n 's/^author://p; s/^reviewer://p'
@@ -119,22 +120,7 @@ source and binary form from:
   * http://www.sagemath.org/download.html
 
 Sage (http://www.sagemath.org/) is developed by volunteers and combines
-over 90 open source packages. For instructions about installing Sage, see
-
-  * http://doc.sagemath.org/html/en/installation/index.html
-
-The following page lists the platforms on which Sage should work:
-
-  * http://wiki.sagemath.org/SupportedPlatforms
-
-If you have any questions and/or problems, please report them to any of
-these Google groups:
-
-  * sage-support: http://groups.google.com/group/sage-support
-  * sage-devel: http://groups.google.com/group/sage-devel
-
-You can also drop by in #sagemath on freenode or post your questions
-at http://ask.sagemath.org/
+hundreds of open source packages.
 
 The following `grep -c . contributors.log` people contributed to this release. Of those, `grep -c "first contribution" contributors2.log` made
 their first contribution to Sage:
