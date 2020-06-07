@@ -5,3 +5,4 @@ merger/bin/getrealname
 merger/bin/ifoutput
 merger/bin/parseticket
 merger/merger
+.DS_Store
