@@ -1,27 +1,12 @@
-﻿Sage 8.9 was released on 29 September 2019. It is available in
+﻿Sage 8.9 was released on 2019-09-29. It is available in
 source and binary form from:
 
   * http://www.sagemath.org/download.html
 
 Sage (http://www.sagemath.org/) is developed by volunteers and combines
-over 90 open source packages. For instructions about installing Sage, see
+hundreds of open source packages.
 
-  * http://doc.sagemath.org/html/en/installation/index.html
-
-The following page lists the platforms on which Sage should work:
-
-  * http://wiki.sagemath.org/SupportedPlatforms
-
-If you have any questions and/or problems, please report them to any of
-these Google groups:
-
-  * sage-support: http://groups.google.com/group/sage-support
-  * sage-devel: http://groups.google.com/group/sage-devel
-
-You can also drop by in #sagemath on freenode or post your questions
-at http://ask.sagemath.org/
-
-The following 139 people contributed to this release. Of those, 55 made
+The following 134 people contributed to this release. Of those, 50 made
 their first contribution to Sage:
 
   - Adam Towsley
@@ -43,7 +28,6 @@ their first contribution to Sage:
   - Bruno Grenet
   - Chaman Agrawal
   - Clemens Heuberger
-  - Clement Pernet
   - Clément Pernet
   - Colby Kelln [first contribution]
   - Daniel Krenn
@@ -52,7 +36,6 @@ their first contribution to Sage:
   - Dima Pasechnik
   - Duncan Levear [first contribution]
   - Elizabeth Kelley [first contribution]
-  - Emile Nadeau [first contribution]
   - Emily Rachfal [first contribution]
   - Emmanuel Charpentier
   - Eric Gourgoulhon
@@ -72,7 +55,6 @@ their first contribution to Sage:
   - Georgios Giapitzakis Tzintanos
   - Gerardo Zelaya Eufemia [first contribution]
   - Grayson Jorgenson
-  - Greyson Jorgenson [first contribution]
   - Harrison Chapman [first contribution]
   - Heidi Benham [first contribution]
   - Hendrik Schrezenmaier [first contribution]
@@ -97,16 +79,15 @@ their first contribution to Sage:
   - Julia Cai [first contribution]
   - Julian Ritter [first contribution]
   - Julian Rüth
-  - Juliano Levier [first contribution]
   - Juliano Levier-Gomes [first contribution]
   - Justine Falque
+  - Karl-Dieter Crisman
   - Kevin Dilks
   - Kevin Lui
   - Kiran Kedlaya
   - Konrad K. Dabrowski
   - Kwankyu Lee
   - Laith Rastanawi
-  - Leo Mayer [first contribution]
   - Leopold Mayer [first contribution]
   - Luca De Feo
   - Lukas Stennes
@@ -162,7 +143,6 @@ their first contribution to Sage:
   - Wayne Peng [first contribution]
   - Xavier Caruso
   - Émile Nadeau
-  - ​Karl-Dieter Crisman [first contribution]
 
 * Release manager: Volker Braun.
 
@@ -199,7 +179,7 @@ Merged in sage-8.9.beta0:
 #27963: Frédéric Chapoton: remove deprecated call without names in symbolic [Reviewed by Travis Scrimshaw]
 #27964: Frédéric Chapoton: py3: fix one doctest in cpython folder [Reviewed by Travis Scrimshaw]
 #27965: Frédéric Chapoton, John Palmieri: py3: fix the last doctest in geometry [Reviewed by Frédéric Chapoton]
-#27968: Dima Pasechnik: update sagetex to version 3.3 [Reviewed by John Palmieri, ​Karl-Dieter Crisman]
+#27968: Dima Pasechnik: update sagetex to version 3.3 [Reviewed by John Palmieri, Karl-Dieter Crisman]
 #27970: Erik Bray: libgd compiled with vpx support can has matrix_mod2_dense to fail to load, lah [Reviewed by Dima Pasechnik]
 #27971: John Palmieri: py3 failures in sage/misc/sageinspect.py and sagedoc.py [Reviewed by Vincent Klein]
 #27975: Frédéric Chapoton: py3: fix last doctest in ext folder [Reviewed by Vincent Klein]
@@ -258,16 +238,16 @@ Merged in sage-8.9.beta2:
 #27980: Frédéric Chapoton: various typos, once more [Reviewed by Travis Scrimshaw]
 #27981: Julian Ritter: Typos in Polyhedron documentation [Reviewed by Frédéric Chapoton]
 #27982: Ben Hutz: Make Lattes map for projective space coerce base ring [Reviewed by Adam Towsley]
-#27983: Leo Mayer: Add monic=True option for chebyshev creator [Reviewed by Brandon Gontmacher]
+#27983: Leopold Mayer: Add monic=True option for chebyshev creator [Reviewed by Brandon Gontmacher]
 #27985: Henry Talbott: Make dynatomic polynomial coerce base ring [Reviewed by Colby Kelln, Alex Shearer, Wayne Peng, Fiona Lu, Eric Zhu, Anna Chlopecki]
 #27992: Talia Blum, Jasmine Camero, Joey Lupo: sanity check parameter added to prime_list in minimal_model [Reviewed by Emily Rachfal]
-#27994: Matt Torrence, Olivia Schwager, Shuofeng Xu: Name mismatch on affine space and projective space constructors [Reviewed by Meghan Grip, Julia Cai, Srinjoy Srimani, Greyson Jorgenson]
+#27994: Matt Torrence, Olivia Schwager, Shuofeng Xu: Name mismatch on affine space and projective space constructors [Reviewed by Meghan Grip, Julia Cai, Srinjoy Srimani, Grayson Jorgenson]
 #27995: Meghan Grip, Julia Cai, Srinjoy Srimani, Grayson Jorgenson: normal_form should Return the Embedding when working over a Finite Field [Reviewed by Matt Torrence, Olivia Schwager, Shuofeng Xu]
 #27996: Markus Wageringel: py3: Fix doctests in optional Mathematica interface [Reviewed by Frédéric Chapoton]
 #27999: Markus Wageringel: Add sage.libs.giac to reference manual [Reviewed by Frédéric Chapoton]
 #28003: Frédéric Chapoton: some enhancements to the usage of join [Reviewed by Travis Scrimshaw]
 #28009: Frédéric Chapoton: minor details about % 2 in combinat [Reviewed by Travis Scrimshaw]
-#28026: Brandon Gontmacher, Max Weinreich, Juliano Levier: missing parameter in critical_point_portrait for dynamical systems [Reviewed by Alexander Galarraga]
+#28026: Brandon Gontmacher, Max Weinreich, Juliano Levier-Gomes: missing parameter in critical_point_portrait for dynamical systems [Reviewed by Alexander Galarraga]
 #28028: Henry Talbott: Enhance change_ring method on morphisms to use canonical embedding when possible, give clearer error in other cases [Reviewed by Adam Towsley, Anna Chlopecki, Emily Rachfal, Juliano Levier-Gomes]
 #28030: Isuru Fernando: MR19: Update conda instructions [Reviewed by Dima Pasechnik]
 #28031: Frédéric Chapoton: implement Rees product of posets [Reviewed by Jori Mäntysalo]
@@ -339,7 +319,7 @@ Merged in sage-8.9.beta3:
 #28174: Matt Torrence, Henry Talbott: Fixed typo for dehomogenization of non-endomorphisms [Reviewed by Ben Hutz]
 #28177: John Palmieri: py3 fix for combinat/finite_state.py [Reviewed by Vincent Klein]
 #28178: Vincent Delecroix: get rid of ETupleIter [Reviewed by Frédéric Chapoton]
-#28183: Emile Nadeau: typo in words module [Reviewed by Duncan Levear]
+#28183: Émile Nadeau: typo in words module [Reviewed by Duncan Levear]
 #28185: Frédéric Chapoton: more lazy imports in combinat [Reviewed by John Palmieri]
 #28186: Frédéric Chapoton: cleanup of misc/flatten [Reviewed by Markus Wageringel]
 #28193: Frédéric Chapoton: remove deprecated alias in hyperbolic geodesics [Reviewed by Travis Scrimshaw]
@@ -370,7 +350,7 @@ Merged in sage-8.9.beta4:
 #28149: Travis Scrimshaw: Implement compact real forms for matrix Lie algebras [Reviewed by Ben Salisbury, Frédéric Chapoton]
 #28161: Jasmine Camero, Olivia Schwager: Make _number_field_from_algebraics() return a dynamical system [Reviewed by Ben Hutz]
 #28167: Vincent Klein: Py3: Fix combinat.root_system.root_lattice_realisations doctests [Reviewed by John Palmieri]
-#28169: Meghan Grip, Emily Rachfal, Talia Blum, John Doyle: Option for adjugate in conjugation function with normalize_coordinates [Reviewed by Leo Mayer, Julia Cai]
+#28169: Meghan Grip, Emily Rachfal, Talia Blum, John Doyle: Option for adjugate in conjugation function with normalize_coordinates [Reviewed by Leopold Mayer, Julia Cai]
 #28176: Salvatore Stella: Fix few bugs in ClusterAlgebra discovered while working on #26771 [Reviewed by Elizabeth Kelley]
 #28191: Vincent Delecroix: simplify root refinement in qqbar.py [Reviewed by Simon Brandhorst]
 #28192: Frédéric Chapoton: more py3 passing folders [Reviewed by Travis Scrimshaw]
@@ -515,7 +495,7 @@ Merged in sage-8.9.beta9:
 #25817: Nils Bruin, Frédéric Chapoton: RuntimeError: Encountered operator mismatch in maxima-to-sr translation, integrate [Reviewed by Travis Scrimshaw]
 #25823: Thierry Monteil: maxima segfaults on integral computation [Reviewed by Frédéric Chapoton]
 #27096: Xavier Caruso: Bug in Buchberger algorithm over Tate algebra [Reviewed by Travis Scrimshaw, Frédéric Chapoton]
-#27444: Hongguang Zhu, Clement Pernet: Expose multithreaded fflas-ffpack features [Reviewed by Luca De Feo]
+#27444: Hongguang Zhu, Clément Pernet: Expose multithreaded fflas-ffpack features [Reviewed by Luca De Feo]
 #27473: Kiran Kedlaya: Matrix inversion fails over a Laurent series ring [Reviewed by Frédéric Chapoton]
 #27587: Erik Bray: Follow up to #25680: Fix tempfile handling in doctests [Reviewed by Frédéric Chapoton, Samuel Lelièvre]
 #27689: Laith Rastanawi, Jonathan Kliem: Implement is_pyramid, is_bipyramid, is_prism for polytopes [Reviewed by Jean-Philippe Labbé]
