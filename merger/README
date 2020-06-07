@@ -2,8 +2,7 @@
 
 == Description ==
 
-Script to merge a new Sage version, i.e. to apply patches from Trac
-to an existing Sage version and produce a new Sage version.
+Script to make Sage changelogs.
 
 == License ==
 
@@ -16,43 +15,14 @@ GNU General Public License, either version 2 of the License, or
 
 == Variables ==
 
-The following shell variable MUST be set in the main merge script:
-
-* OLDVERSION: Old version of Sage (e.g. 4.7) to start from.  This old
-version will automatically be downloaded from $RELEASEURL.
-
-
 The following variables MAY be set.  If not set, a default value will
 be used.  In all cases, a non-existing directory will be created.
 
-* VERSION (default: the current directory name with a leading "sage-"
-removed): The new version of Sage to be created (e.g. 4.7.1.alpha2).
+* VERSION: The new version of Sage.
 
 * SAGE_MERGER_TOP (default: $HOME/merger): Fully qualified top working
 directory, shared across Sage versions.  It is used as a default for
 several other variables and is also used to extract Sage.
-
-* TMPDIR (default: $SAGE_MERGER_TOP/tmp): Fast directory for extracting
-spkgs, applying patches and compiling.  Hint: make $SAGE_MERGER_TOP/tmp
-a symbolic link to some tmpfs file system.  This will speed up things.
-
-* DOWNLOADS (default: $SAGE_MERGER_TOP/downloads): Directory for
-downloads, shared across mergers.  Patches, spkgs and full Sage
-distributions will be put here.  Also a file md5sums will be created
-containing the MD5 checksums of the downloaded files.
-
-* PATCHES (default: $SAGE_MERGER_TOP/patches): Directory for patches,
-after they are downloaded and cleaned up (like adding ticket number to
-commit message).  This is shared across mergers.
-
-* BUILD (default: $SAGE_MERGER_TOP/sage-$VERSION): Directory used to
-build the new Sage version.  This directory will be deleted and
-recreated if it already exists.
-
-* DIST (default: current working directory): Directory where the
-resulting files (tarball, upgrade path, release notes,...) will be
-stored by the dist-sage function.  Pre-existing Sage distributions here
-will be overwritten.
 
 * LOGDIR (default: $DIST/logs): Directory where the log files of the
 merger script will be written to.  Also the release notes will be put
@@ -66,40 +36,8 @@ Where can Sage releases (old and new) be downloaded from?
 * TRACURL (default: http://trac.sagemath.org/sage_trac): URL for the
 Sage Trac.
 
-* HG (default: sage --hg): Mercurial command.
-
 * RELEASEMANAGER (default: real name of current user): Real name of
 the release manager.
-
-== Merge process ==
-
-The merge process consists of the following steps.  The function
-do_merge() must be defined in the merger script, all the others are
-part of the merger package.
-
- * setup_logging
-
- * extract_old_tarball
-
- * setup_spkgs
-
- * extract_old_spkgs
-
- * do_merge
-
- * check_downloads
-
- * post_merge
-
- * build_sage
-
- * test_sage
-
- * dist_sage
-
- * check_spkg_hg
-
- * copy_dist
 
 
 == Hook functions ==

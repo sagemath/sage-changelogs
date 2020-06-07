@@ -28,18 +28,12 @@ setup_environment()
 	export PATH="$MERGER_DIR/bin/ccache:$MERGER_DIR/bin:/usr/local/bin:/usr/bin:/bin"
 	export TZ=UTC
 
-	export SAGE_PARALLEL_SPKG_BUILD=no   # Better predictability, logs easier to read
-	export SAGE_INSTALL_GCC=no
-
 	# Provide default values for all the unset variables
 	[ -n "$SAGE_MERGER_TOP" ] || SAGE_MERGER_TOP="$HOME/merger"
 	[ -n "$TMPDIR" ] || TMPDIR=`readlink -mv "$SAGE_MERGER_TOP/tmp"`
-	[ -n "$DOWNLOADS" ] || DOWNLOADS="$SAGE_MERGER_TOP/downloads"
-	[ -n "$PATCHES" ] || PATCHES="$SAGE_MERGER_TOP/patches"
-	[ -n "$BUILD" ] || BUILD="$SAGE_MERGER_TOP/sage-$VERSION"
 	[ -n "$LOGDIR" ] || LOGDIR="$DIST/logs"
-	[ -n "$RELEASEURL" ] || RELEASEURL="http://boxen.math.washington.edu/home/release"
 	[ -n "$TRACURL" ] || TRACURL="http://trac.sagemath.org/sage_trac"
+	[ -n "$RELEASEURL" ] || RELEASEURL="FIXME"
 	[ -n "$RELEASEMANAGER" ] || RELEASEMANAGER=`getrealname`
 	export TMPDIR
 	

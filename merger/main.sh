@@ -36,12 +36,6 @@ source "$MERGER_DIR/prereq.sh"
 
 # Read all functions
 source "$MERGER_DIR/init.sh"
-source "$MERGER_DIR/release.sh"
-source "$MERGER_DIR/buildbot.sh"
-source "$MERGER_DIR/pre_post_merge.sh"
-source "$MERGER_DIR/merge.sh"
-source "$MERGER_DIR/make.sh"
-source "$MERGER_DIR/download.sh"
 
 # Usage: run_with_hook <function>
 # Run a function <function> after running a potential hook function

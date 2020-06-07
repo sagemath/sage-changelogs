@@ -1,9 +1,0 @@
-#!/bin/sh
-
-cat >&2 <<EOF
-
-WARNING: running $0
-
-EOF
-
-exit 1
