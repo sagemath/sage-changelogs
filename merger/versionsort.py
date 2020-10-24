@@ -11,7 +11,7 @@ TESTS::
     >>> L += ["x", "xy", "y", "xyz", "XYZ", ""]
     >>> L = [VersionNumber(v) for v in L]
     >>> S = sorted(L)
-    >>> print S
+    >>> print(S)
     ['',
      'XYZ',
      'abc',
@@ -96,4 +96,4 @@ class VersionNumber(str):
 if __name__ == "__main__":
     L = [VersionNumber(v.strip()) for v in sys.stdin]
     for x in sorted(L):
-        print x
+        print(x)
